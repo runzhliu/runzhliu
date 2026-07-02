@@ -7,7 +7,8 @@ const README = path.resolve(process.cwd(), "README.md");
 const START = "<!-- CONTRIBUTED_PROJECTS:START -->";
 const END = "<!-- CONTRIBUTED_PROJECTS:END -->";
 const DAYS = Number.parseInt(process.env.CONTRIBUTION_DAYS || "365", 10);
-const MAX_REPOS = Number.parseInt(process.env.CONTRIBUTION_MAX_REPOS || "25", 10);
+const FEATURED_LIMIT = Number.parseInt(process.env.FEATURED_REPO_LIMIT || "8", 10);
+const EXTERNAL_LIMIT = Number.parseInt(process.env.EXTERNAL_REPO_LIMIT || "8", 10);
 
 if (!TOKEN) {
   throw new Error("Set GITHUB_TOKEN or GH_TOKEN before running this script.");
@@ -22,8 +23,12 @@ const repositoryFields = `
   url
   description
   stargazerCount
+  forkCount
   isFork
   isArchived
+  isPrivate
+  updatedAt
+  pushedAt
   primaryLanguage {
     name
     color
@@ -31,14 +36,41 @@ const repositoryFields = `
 `;
 
 const query = `
-query Contributions($login: String!, $from: DateTime!, $to: DateTime!) {
+query ProfileRepos(
+  $login: String!
+  $from: DateTime!
+  $to: DateTime!
+  $ownedAfter: String
+  $contributedAfter: String
+) {
   user(login: $login) {
+    repositories(
+      first: 100
+      after: $ownedAfter
+      ownerAffiliations: OWNER
+      privacy: PUBLIC
+      orderBy: { field: UPDATED_AT, direction: DESC }
+    ) {
+      totalCount
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      nodes {
+        ${repositoryFields}
+      }
+    }
     repositoriesContributedTo(
       first: 100
+      after: $contributedAfter
       includeUserRepositories: true
       contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, PULL_REQUEST_REVIEW]
     ) {
       totalCount
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
       nodes {
         ${repositoryFields}
       }
@@ -85,37 +117,111 @@ query Contributions($login: String!, $from: DateTime!, $to: DateTime!) {
 }
 `;
 
-function mergeRepo(target, repo, kind, count = 0) {
-  if (!repo || repo.isArchived) return;
-
-  const existing = target.get(repo.nameWithOwner) || {
-    nameWithOwner: repo.nameWithOwner,
-    url: repo.url,
-    description: repo.description || "",
-    stars: repo.stargazerCount || 0,
-    language: repo.primaryLanguage?.name || "",
-    languageColor: repo.primaryLanguage?.color || "",
+function blankActivity() {
+  return {
     commits: 0,
     issues: 0,
     pullRequests: 0,
     reviews: 0,
   };
-
-  existing[kind] += count;
-  target.set(repo.nameWithOwner, existing);
 }
 
-function compactDescription(description) {
-  if (!description) return "";
-  return description.replace(/\s+/g, " ").trim().slice(0, 120);
+function normalizeRepo(repo) {
+  return {
+    nameWithOwner: repo.nameWithOwner,
+    url: repo.url,
+    description: repo.description || "",
+    stars: repo.stargazerCount || 0,
+    forks: repo.forkCount || 0,
+    isFork: Boolean(repo.isFork),
+    isArchived: Boolean(repo.isArchived),
+    isPrivate: Boolean(repo.isPrivate),
+    language: repo.primaryLanguage?.name || "",
+    updatedAt: repo.updatedAt || "",
+    pushedAt: repo.pushedAt || "",
+    owned: false,
+    contributed: false,
+    activity: blankActivity(),
+  };
+}
+
+function upsertRepo(target, repo, patch = {}) {
+  if (!repo || repo.isPrivate) return null;
+
+  const existing = target.get(repo.nameWithOwner) || normalizeRepo(repo);
+  Object.assign(existing, patch);
+
+  existing.description ||= repo.description || "";
+  existing.stars = Math.max(existing.stars, repo.stargazerCount || 0);
+  existing.forks = Math.max(existing.forks, repo.forkCount || 0);
+  existing.language ||= repo.primaryLanguage?.name || "";
+  existing.updatedAt = maxIso(existing.updatedAt, repo.updatedAt || "");
+  existing.pushedAt = maxIso(existing.pushedAt, repo.pushedAt || "");
+
+  target.set(existing.nameWithOwner, existing);
+  return existing;
+}
+
+function addActivity(target, repo, kind, count = 0) {
+  const existing = upsertRepo(target, repo, { contributed: true });
+  if (!existing) return;
+
+  existing.activity[kind] += count;
+}
+
+function maxIso(left, right) {
+  if (!left) return right;
+  if (!right) return left;
+  return left > right ? left : right;
+}
+
+function compactDescription(description, max = 150) {
+  const normalized = String(description || "").replace(/\s+/g, " ").trim();
+  if (normalized.length <= max) return normalized;
+  return `${normalized.slice(0, max - 3).trim()}...`;
 }
 
 function formatNumber(value) {
   return new Intl.NumberFormat("en", { notation: "compact" }).format(value);
 }
 
-function escapeCell(value) {
-  return String(value || "").replaceAll("|", "\\|").replace(/\n/g, " ");
+function plural(value, singular, pluralValue = `${singular}s`) {
+  return `${formatNumber(value)} ${value === 1 ? singular : pluralValue}`;
+}
+
+function formatDate(value) {
+  if (!value) return "";
+  return value.slice(0, 10);
+}
+
+function formatActivity(repo) {
+  const activity = repo.activity;
+  return [
+    activity.commits ? plural(activity.commits, "commit") : "",
+    activity.pullRequests ? plural(activity.pullRequests, "PR") : "",
+    activity.reviews ? plural(activity.reviews, "review") : "",
+    activity.issues ? plural(activity.issues, "issue") : "",
+  ]
+    .filter(Boolean)
+    .join(", ");
+}
+
+function repoLine(repo, options = {}) {
+  const meta = [
+    repo.language,
+    `⭐ ${plural(repo.stars, "star")}`,
+    repo.forks ? `🍴 ${plural(repo.forks, "fork")}` : "",
+    options.showActivity ? formatActivity(repo) : "",
+    options.showUpdated ? `🕒 updated ${formatDate(repo.updatedAt)}` : "",
+    repo.isFork ? "fork" : "",
+    repo.isArchived ? "archived" : "",
+  ].filter(Boolean);
+
+  const description = compactDescription(repo.description);
+  const suffix = meta.length ? ` - ${meta.join(" · ")}` : "";
+  const body = description ? `  \n  ${description}` : "";
+
+  return `- **[${repo.nameWithOwner}](${repo.url})**${suffix}${body}`;
 }
 
 async function githubGraphql(variables) {
@@ -137,75 +243,130 @@ async function githubGraphql(variables) {
   return payload.data;
 }
 
-function buildMarkdown(data) {
-  const user = data.user;
-  const collection = user.contributionsCollection;
+async function fetchProfileData() {
   const repos = new Map();
+  let ownedAfter = null;
+  let contributedAfter = null;
+  let collection = null;
+  let ownedTotal = 0;
+  let contributedTotal = 0;
 
-  for (const repo of user.repositoriesContributedTo.nodes || []) {
-    mergeRepo(repos, repo, "commits", 0);
-  }
+  do {
+    const data = await githubGraphql({
+      login: USERNAME,
+      from: from.toISOString(),
+      to: to.toISOString(),
+      ownedAfter,
+      contributedAfter,
+    });
+    const user = data.user;
+
+    collection ||= user.contributionsCollection;
+    ownedTotal = user.repositories.totalCount;
+    contributedTotal = user.repositoriesContributedTo.totalCount;
+
+    for (const repo of user.repositories.nodes || []) {
+      upsertRepo(repos, repo, { owned: true });
+    }
+    for (const repo of user.repositoriesContributedTo.nodes || []) {
+      upsertRepo(repos, repo, { contributed: true });
+    }
+
+    ownedAfter = user.repositories.pageInfo.hasNextPage ? user.repositories.pageInfo.endCursor : null;
+    contributedAfter = user.repositoriesContributedTo.pageInfo.hasNextPage
+      ? user.repositoriesContributedTo.pageInfo.endCursor
+      : null;
+  } while (ownedAfter || contributedAfter);
 
   for (const item of collection.commitContributionsByRepository || []) {
-    mergeRepo(repos, item.repository, "commits", item.contributions.totalCount);
+    addActivity(repos, item.repository, "commits", item.contributions.totalCount);
   }
   for (const item of collection.issueContributionsByRepository || []) {
-    mergeRepo(repos, item.repository, "issues", item.contributions.totalCount);
+    addActivity(repos, item.repository, "issues", item.contributions.totalCount);
   }
   for (const item of collection.pullRequestContributionsByRepository || []) {
-    mergeRepo(repos, item.repository, "pullRequests", item.contributions.totalCount);
+    addActivity(repos, item.repository, "pullRequests", item.contributions.totalCount);
   }
   for (const item of collection.pullRequestReviewContributionsByRepository || []) {
-    mergeRepo(repos, item.repository, "reviews", item.contributions.totalCount);
+    addActivity(repos, item.repository, "reviews", item.contributions.totalCount);
   }
 
-  const sortedRepos = [...repos.values()]
-    .sort((a, b) => {
-      const aTotal = a.commits + a.issues + a.pullRequests + a.reviews;
-      const bTotal = b.commits + b.issues + b.pullRequests + b.reviews;
-      return bTotal - aTotal || b.stars - a.stars || a.nameWithOwner.localeCompare(b.nameWithOwner);
-    })
-    .slice(0, MAX_REPOS);
+  return {
+    repos: [...repos.values()].filter((repo) => !repo.isPrivate),
+    collection,
+    ownedTotal,
+    contributedTotal,
+  };
+}
 
-  const recentTotal =
-    collection.totalCommitContributions +
-    collection.totalIssueContributions +
-    collection.totalPullRequestContributions +
-    collection.totalPullRequestReviewContributions;
+function activityTotal(repo) {
+  return repo.activity.commits + repo.activity.issues + repo.activity.pullRequests + repo.activity.reviews;
+}
+
+function sortFeatured(left, right) {
+  return (
+    right.stars - left.stars ||
+    activityTotal(right) - activityTotal(left) ||
+    right.updatedAt.localeCompare(left.updatedAt) ||
+    left.nameWithOwner.localeCompare(right.nameWithOwner)
+  );
+}
+
+function sortUpdated(left, right) {
+  return right.updatedAt.localeCompare(left.updatedAt) || left.nameWithOwner.localeCompare(right.nameWithOwner);
+}
+
+function buildSection(title, repos, options = {}) {
+  if (!repos.length) return [];
+
+  const lines = [`### ${title}`, ""];
+  for (const repo of repos) {
+    lines.push(repoLine(repo, options));
+  }
+  lines.push("");
+  return lines;
+}
+
+function buildMarkdown(data) {
+  const ownedRepos = data.repos.filter((repo) => repo.owned);
+  const originalRepos = ownedRepos.filter((repo) => !repo.isFork);
+  const forkRepos = ownedRepos.filter((repo) => repo.isFork);
+  const externalRepos = data.repos.filter((repo) => repo.contributed && !repo.nameWithOwner.startsWith(`${USERNAME}/`));
+  const activeRepos = data.repos.filter((repo) => activityTotal(repo) > 0);
+  const recentTotal = activeRepos.reduce((total, repo) => total + activityTotal(repo), 0);
+  const featuredRepos = originalRepos
+    .filter((repo) => !repo.isArchived && repo.nameWithOwner !== `${USERNAME}/${USERNAME}`)
+    .sort(sortFeatured)
+    .slice(0, FEATURED_LIMIT);
 
   const lines = [
-    `Tracking **${user.repositoriesContributedTo.totalCount}** public repositories I have contributed to. Recent activity covers the last **${DAYS}** days: **${recentTotal}** contributions.`,
+    `📦 Tracking **${data.ownedTotal}** public repositories under \`${USERNAME}\` and **${externalRepos.length}** external public projects with recognized GitHub contributions.`,
+    `📈 Recent activity covers the last **${DAYS}** days: **${recentTotal}** commits, PRs, reviews and issues across **${activeRepos.length}** repositories.`,
     "",
-    "| Project | Description | Stars | Language | Recent activity |",
-    "| --- | --- | ---: | --- | ---: |",
+    ...buildSection("✨ Featured Projects", featuredRepos, { showActivity: true }),
+    ...buildSection("🤝 External Contributions", externalRepos.sort(sortFeatured).slice(0, EXTERNAL_LIMIT), {
+      showActivity: true,
+    }),
+    "<details>",
+    `<summary>📚 All public repositories (${ownedRepos.length})</summary>`,
+    "",
+    "#### 🧱 Original repositories",
+    "",
+    ...originalRepos.sort(sortUpdated).map((repo) => repoLine(repo, { showUpdated: true })),
+    "",
+    "#### 🍴 Forks and mirrors",
+    "",
+    ...forkRepos.sort(sortUpdated).map((repo) => repoLine(repo, { showUpdated: true })),
+    "",
+    "</details>",
+    "",
+    `_🕒 Last updated: ${to.toISOString().slice(0, 10)} UTC_`,
   ];
 
-  for (const repo of sortedRepos) {
-    const recent = repo.commits + repo.issues + repo.pullRequests + repo.reviews;
-    const activity = [
-      repo.commits ? `${repo.commits} commits` : "",
-      repo.pullRequests ? `${repo.pullRequests} PRs` : "",
-      repo.reviews ? `${repo.reviews} reviews` : "",
-      repo.issues ? `${repo.issues} issues` : "",
-    ]
-      .filter(Boolean)
-      .join(", ");
-
-    lines.push(
-      `| [${escapeCell(repo.nameWithOwner)}](${repo.url}) | ${escapeCell(compactDescription(repo.description))} | ${formatNumber(repo.stars)} | ${escapeCell(repo.language)} | ${escapeCell(activity || (recent ? String(recent) : "-"))} |`,
-    );
-  }
-
-  lines.push("", `_Last updated: ${to.toISOString().slice(0, 10)} UTC_`);
   return lines.join("\n");
 }
 
-const data = await githubGraphql({
-  login: USERNAME,
-  from: from.toISOString(),
-  to: to.toISOString(),
-});
-
+const data = await fetchProfileData();
 const readme = await readFile(README, "utf8");
 const start = readme.indexOf(START);
 const end = readme.indexOf(END);
@@ -218,4 +379,3 @@ const generated = buildMarkdown(data);
 const nextReadme = `${readme.slice(0, start + START.length)}\n${generated}\n${readme.slice(end)}`;
 
 await writeFile(README, nextReadme);
-
