@@ -2,11 +2,21 @@
 
 ☸️ Focus on Kubernetes & AI/LLMs Infras.
 
+## 🎙️ Podcast & Blog
+
+🏠 [runzhliu.cn](https://runzhliu.cn/)
+
+<!-- BLOG_POSTS:START -->
+- 📝 [openclaw-weixin插件深度分析报告](https://www.runzhliu.cn/openclaw-weixin%E6%8F%92%E4%BB%B6%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A/) - 2026-03-21
+- 📝 [WeLink-帮你分析自己的的微信聊天记录](https://www.runzhliu.cn/welink-%E5%B8%AE%E4%BD%A0%E5%88%86%E6%9E%90%E8%87%AA%E5%B7%B1%E7%9A%84%E7%9A%84%E5%BE%AE%E4%BF%A1%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95/) - 2026-03-17
+- 📝 [我把Antigravity装进Docker还顺便解决了音频问题](https://www.runzhliu.cn/%E6%88%91%E6%8A%8Aantigravity%E8%A3%85%E8%BF%9Bdocker%E8%BF%98%E9%A1%BA%E4%BE%BF%E8%A7%A3%E5%86%B3%E4%BA%86%E9%9F%B3%E9%A2%91%E9%97%AE%E9%A2%98/) - 2026-03-04
+<!-- BLOG_POSTS:END -->
+
 ## 🚀 Open Source Contributions
 
 <!-- CONTRIBUTED_PROJECTS:START -->
-📦 Tracking **27** public repositories under `runzhliu` and **2** external public projects with recognized GitHub contributions.
-📈 Recent activity covers the last **365** days: **636** commits, PRs, reviews and issues across **7** repositories.
+📦 Tracking **27** public repositories under `runzhliu` and **32** external public projects with recognized GitHub contributions.
+📈 Recent activity covers the last **365** days: **637** commits, PRs, reviews and issues across **7** repositories.
 
 ### ✨ Featured Projects
 
@@ -25,10 +35,99 @@
 
 ### 🤝 External Contributions
 
-- **[jackwener/OpenCLI](https://github.com/jackwener/OpenCLI)** - JavaScript · ⭐ 26K stars · 🍴 2.6K forks · 1 commit, 1 PR  
-  Make Any Website into CLI & Use your logged-in browser by AI agent.
-- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 3K stars · 🍴 376 forks · 1 commit, 2 PRs  
+- **[apache/kyuubi](https://github.com/apache/kyuubi)** - Scala · ⭐ 2.3K stars · 🍴 1K forks · 8 authored PRs, 1 authored issue, 2 reviewed PRs  
+  Apache Kyuubi is a distributed and multi-tenant gateway to provide serverless SQL on data warehouses and lakehouses.
+- **[kubeflow/mpi-operator](https://github.com/kubeflow/mpi-operator)** - Go · ⭐ 529 stars · 🍴 236 forks · 4 authored PRs, 1 authored issue, 2 reviewed PRs  
+  Kubernetes Operator for MPI-based applications (distributed training, HPC, etc.)
+- **[kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)** - Go · ⭐ 123K stars · 🍴 43K forks · 3 authored PRs, 1 reviewed PR  
+  Production-Grade Container Scheduling and Management
+- **[apache/carbondata](https://github.com/apache/carbondata)** - Scala · ⭐ 1.4K stars · 🍴 697 forks · 3 authored PRs, 1 reviewed PR  
+  High performance data store solution
+- **[anjia0532/gcr.io_mirror](https://github.com/anjia0532/gcr.io_mirror)** - Go · ⭐ 1.4K stars · 🍴 445 forks · 3 authored issues  
+  all of the gcr.io docker image mirror
+- **[pravega/zookeeper-operator](https://github.com/pravega/zookeeper-operator)** - Go · ⭐ 384 stars · 🍴 215 forks · 1 authored PR, 1 authored issue, 1 reviewed PR  
+  Kubernetes Operator for Zookeeper
+- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 3K stars · 🍴 376 forks · 2 authored PRs · 1 commit, 2 PRs  
   agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes.
+- **[kubernetes/website](https://github.com/kubernetes/website)** - HTML · ⭐ 5.3K stars · 🍴 15K forks · 1 authored PR, 1 authored issue  
+  Kubernetes website and documentation repo:
+- **[NVIDIA/dcgm-exporter](https://github.com/NVIDIA/dcgm-exporter)** - Go · ⭐ 1.8K stars · 🍴 307 forks · 2 authored PRs  
+  NVIDIA GPU metrics exporter for Prometheus leveraging DCGM
+- **[kubernetes-sigs/scheduler-plugins](https://github.com/kubernetes-sigs/scheduler-plugins)** - Go · ⭐ 1.3K stars · 🍴 608 forks · 1 authored PR, 1 reviewed PR  
+  Repository for out-of-tree scheduler plugins based on scheduler framework.
+- **[kubeflow/xgboost-operator](https://github.com/kubeflow/xgboost-operator)** - Python · ⭐ 77 stars · 🍴 53 forks · 1 authored PR, 1 authored issue · archived  
+  Incubating project for xgboost operator
+- **[jackwener/OpenCLI](https://github.com/jackwener/OpenCLI)** - JavaScript · ⭐ 26K stars · 🍴 2.6K forks · 1 authored PR · 1 commit, 1 PR  
+  Make Any Website into CLI & Use your logged-in browser by AI agent.
+
+<details>
+<summary>🌐 All recognized external projects (32)</summary>
+
+- **[apache/kyuubi](https://github.com/apache/kyuubi)** - Scala · ⭐ 2.3K stars · 🍴 1K forks · 8 authored PRs, 1 authored issue, 2 reviewed PRs  
+  Apache Kyuubi is a distributed and multi-tenant gateway to provide serverless SQL on data warehouses and lakehouses.
+- **[kubeflow/mpi-operator](https://github.com/kubeflow/mpi-operator)** - Go · ⭐ 529 stars · 🍴 236 forks · 4 authored PRs, 1 authored issue, 2 reviewed PRs  
+  Kubernetes Operator for MPI-based applications (distributed training, HPC, etc.)
+- **[kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)** - Go · ⭐ 123K stars · 🍴 43K forks · 3 authored PRs, 1 reviewed PR  
+  Production-Grade Container Scheduling and Management
+- **[apache/carbondata](https://github.com/apache/carbondata)** - Scala · ⭐ 1.4K stars · 🍴 697 forks · 3 authored PRs, 1 reviewed PR  
+  High performance data store solution
+- **[anjia0532/gcr.io_mirror](https://github.com/anjia0532/gcr.io_mirror)** - Go · ⭐ 1.4K stars · 🍴 445 forks · 3 authored issues  
+  all of the gcr.io docker image mirror
+- **[pravega/zookeeper-operator](https://github.com/pravega/zookeeper-operator)** - Go · ⭐ 384 stars · 🍴 215 forks · 1 authored PR, 1 authored issue, 1 reviewed PR  
+  Kubernetes Operator for Zookeeper
+- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 3K stars · 🍴 376 forks · 2 authored PRs · 1 commit, 2 PRs  
+  agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes.
+- **[kubernetes/website](https://github.com/kubernetes/website)** - HTML · ⭐ 5.3K stars · 🍴 15K forks · 1 authored PR, 1 authored issue  
+  Kubernetes website and documentation repo:
+- **[NVIDIA/dcgm-exporter](https://github.com/NVIDIA/dcgm-exporter)** - Go · ⭐ 1.8K stars · 🍴 307 forks · 2 authored PRs  
+  NVIDIA GPU metrics exporter for Prometheus leveraging DCGM
+- **[kubernetes-sigs/scheduler-plugins](https://github.com/kubernetes-sigs/scheduler-plugins)** - Go · ⭐ 1.3K stars · 🍴 608 forks · 1 authored PR, 1 reviewed PR  
+  Repository for out-of-tree scheduler plugins based on scheduler framework.
+- **[kubeflow/xgboost-operator](https://github.com/kubeflow/xgboost-operator)** - Python · ⭐ 77 stars · 🍴 53 forks · 1 authored PR, 1 authored issue · archived  
+  Incubating project for xgboost operator
+- **[jackwener/OpenCLI](https://github.com/jackwener/OpenCLI)** - JavaScript · ⭐ 26K stars · 🍴 2.6K forks · 1 authored PR · 1 commit, 1 PR  
+  Make Any Website into CLI & Use your logged-in browser by AI agent.
+- **[apache/spark](https://github.com/apache/spark)** - Scala · ⭐ 44K stars · 🍴 29K forks · 1 authored PR  
+  Apache Spark - A unified analytics engine for large-scale data processing
+- **[rancher/rancher](https://github.com/rancher/rancher)** - Go · ⭐ 26K stars · 🍴 3.2K forks · 1 authored PR  
+  Complete container management platform
+- **[cilium/cilium](https://github.com/cilium/cilium)** - Go · ⭐ 25K stars · 🍴 3.9K forks · 1 authored PR  
+  eBPF-based Networking, Security, and Observability
+- **[timqian/chinese-independent-blogs](https://github.com/timqian/chinese-independent-blogs)** - Python · ⭐ 23K stars · 🍴 2.7K forks · 1 authored PR  
+  中文独立博客列表
+- **[labring/sealos](https://github.com/labring/sealos)** - TypeScript · ⭐ 18K stars · 🍴 2.5K forks · 1 authored PR  
+  Sealos is an AI-native Cloud Operating System that unifies the entire application lifecycle, from development in cloud IDEs to production deploymen...
+- **[prestodb/presto](https://github.com/prestodb/presto)** - Java · ⭐ 17K stars · 🍴 5.5K forks · 1 authored issue  
+  The official home of the Presto distributed SQL query engine for big data
+- **[rook/rook](https://github.com/rook/rook)** - Go · ⭐ 14K stars · 🍴 2.8K forks · 1 authored issue  
+  Storage Orchestration for Kubernetes
+- **[haoel/haoel.github.io](https://github.com/haoel/haoel.github.io)** - Shell · ⭐ 13K stars · 🍴 2K forks · 1 authored PR
+- **[delta-io/delta](https://github.com/delta-io/delta)** - Scala · ⭐ 8.9K stars · 🍴 2.1K forks · 1 authored PR  
+  An open-source storage framework that enables building a Lakehouse architecture with compute engines including Spark, PrestoDB, Flink, Trino, and H...
+- **[kubeflow/spark-operator](https://github.com/kubeflow/spark-operator)** - Python · ⭐ 3.1K stars · 🍴 1.5K forks · 1 authored PR  
+  Kubernetes operator for managing the lifecycle of Apache Spark applications on Kubernetes.
+- **[kubeovn/kube-ovn](https://github.com/kubeovn/kube-ovn)** - Go · ⭐ 2.3K stars · 🍴 539 forks · 1 authored PR  
+  A Bridge between SDN and Cloud Native (Project under CNCF)
+- **[ceph/ceph-csi](https://github.com/ceph/ceph-csi)** - Go · ⭐ 1.6K stars · 🍴 608 forks · 1 authored PR  
+  CSI driver for Ceph
+- **[evildecay/etcdkeeper](https://github.com/evildecay/etcdkeeper)** - JavaScript · ⭐ 1.4K stars · 🍴 252 forks · 1 authored PR  
+  web ui client for etcd
+- **[tensorflow/ecosystem](https://github.com/tensorflow/ecosystem)** - Scala · ⭐ 1.4K stars · 🍴 391 forks · 1 authored issue · archived  
+  Integration of TensorFlow with other open-source frameworks
+- **[sighupio/permission-manager](https://github.com/sighupio/permission-manager)** - TypeScript · ⭐ 1.4K stars · 🍴 173 forks · 1 authored PR  
+  Permission Manager is a project that brings sanity to Kubernetes RBAC and Users management, Web UI FTW
+- **[apache/impala](https://github.com/apache/impala)** - C++ · ⭐ 1.3K stars · 🍴 555 forks · 1 authored PR  
+  Apache Impala
+- **[openebs/lvm-localpv](https://github.com/openebs/lvm-localpv)** - Go · ⭐ 344 stars · 🍴 122 forks · 1 authored PR  
+  Dynamically provision Stateful Persistent Node-Local Volumes & Filesystems for Kubernetes that is integrated with a backend LVM2 data storage stack.
+- **[virtual-kubelet/tensile-kube](https://github.com/virtual-kubelet/tensile-kube)** - Go · ⭐ 290 stars · 🍴 38 forks · 1 authored PR  
+  A Kubernetes Provider
+- **[k3s-io/docs](https://github.com/k3s-io/docs)** - Shell · ⭐ 32 stars · 🍴 197 forks · 1 authored PR  
+  k3s Documentation
+- **[wandb/helm-charts](https://github.com/wandb/helm-charts)** - Go Template · ⭐ 25 stars · 🍴 13 forks · 1 authored PR  
+  Our official helm charts for deploying wandb into k8s
+
+</details>
 
 <details>
 <summary>📚 All public repositories (27)</summary>

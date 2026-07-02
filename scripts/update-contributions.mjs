@@ -4,11 +4,17 @@ import path from "node:path";
 const USERNAME = process.env.GH_LOGIN || process.env.GITHUB_REPOSITORY_OWNER || "runzhliu";
 const TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
 const README = path.resolve(process.cwd(), "README.md");
-const START = "<!-- CONTRIBUTED_PROJECTS:START -->";
-const END = "<!-- CONTRIBUTED_PROJECTS:END -->";
+const BLOG_START = "<!-- BLOG_POSTS:START -->";
+const BLOG_END = "<!-- BLOG_POSTS:END -->";
+const CONTRIBUTIONS_START = "<!-- CONTRIBUTED_PROJECTS:START -->";
+const CONTRIBUTIONS_END = "<!-- CONTRIBUTED_PROJECTS:END -->";
+const BLOG_URL = process.env.BLOG_URL || "https://runzhliu.cn/";
+const BLOG_FEED_URL = process.env.BLOG_FEED_URL || "https://runzhliu.cn/index.xml";
+const BLOG_POST_LIMIT = Number.parseInt(process.env.BLOG_POST_LIMIT || "3", 10);
 const DAYS = Number.parseInt(process.env.CONTRIBUTION_DAYS || "365", 10);
 const FEATURED_LIMIT = Number.parseInt(process.env.FEATURED_REPO_LIMIT || "8", 10);
-const EXTERNAL_LIMIT = Number.parseInt(process.env.EXTERNAL_REPO_LIMIT || "8", 10);
+const EXTERNAL_LIMIT = Number.parseInt(process.env.EXTERNAL_REPO_LIMIT || "12", 10);
+const SEARCH_MAX_PAGES = Number.parseInt(process.env.SEARCH_MAX_PAGES || "10", 10);
 
 if (!TOKEN) {
   throw new Error("Set GITHUB_TOKEN or GH_TOKEN before running this script.");
@@ -126,6 +132,14 @@ function blankActivity() {
   };
 }
 
+function blankSignals() {
+  return {
+    authoredPRs: 0,
+    authoredIssues: 0,
+    reviewedPRs: 0,
+  };
+}
+
 function normalizeRepo(repo) {
   return {
     nameWithOwner: repo.nameWithOwner,
@@ -142,6 +156,7 @@ function normalizeRepo(repo) {
     owned: false,
     contributed: false,
     activity: blankActivity(),
+    signals: blankSignals(),
   };
 }
 
@@ -169,6 +184,13 @@ function addActivity(target, repo, kind, count = 0) {
   existing.activity[kind] += count;
 }
 
+function addSignal(target, repo, kind, count = 0) {
+  const existing = upsertRepo(target, repo, { contributed: true });
+  if (!existing) return;
+
+  existing.signals[kind] += count;
+}
+
 function maxIso(left, right) {
   if (!left) return right;
   if (!right) return left;
@@ -179,6 +201,28 @@ function compactDescription(description, max = 150) {
   const normalized = String(description || "").replace(/\s+/g, " ").trim();
   if (normalized.length <= max) return normalized;
   return `${normalized.slice(0, max - 3).trim()}...`;
+}
+
+function decodeHtml(value) {
+  return String(value || "")
+    .replace(/<!\[CDATA\[(.*?)\]\]>/gs, "$1")
+    .replace(/&#43;/g, "+")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&hellip;/g, "...")
+    .trim();
+}
+
+function pickXmlTag(xml, tagName) {
+  const match = xml.match(new RegExp(`<${tagName}[^>]*>([\\s\\S]*?)<\\/${tagName}>`, "i"));
+  return decodeHtml(match?.[1] || "");
+}
+
+function absoluteUrl(url) {
+  return new URL(url, BLOG_URL).toString();
 }
 
 function formatNumber(value) {
@@ -206,11 +250,23 @@ function formatActivity(repo) {
     .join(", ");
 }
 
+function formatSignals(repo) {
+  const signals = repo.signals;
+  return [
+    signals.authoredPRs ? plural(signals.authoredPRs, "authored PR", "authored PRs") : "",
+    signals.authoredIssues ? plural(signals.authoredIssues, "authored issue") : "",
+    signals.reviewedPRs ? plural(signals.reviewedPRs, "reviewed PR", "reviewed PRs") : "",
+  ]
+    .filter(Boolean)
+    .join(", ");
+}
+
 function repoLine(repo, options = {}) {
   const meta = [
     repo.language,
     `⭐ ${plural(repo.stars, "star")}`,
     repo.forks ? `🍴 ${plural(repo.forks, "fork")}` : "",
+    options.showSignals ? formatSignals(repo) : "",
     options.showActivity ? formatActivity(repo) : "",
     options.showUpdated ? `🕒 updated ${formatDate(repo.updatedAt)}` : "",
     repo.isFork ? "fork" : "",
@@ -241,6 +297,153 @@ async function githubGraphql(variables) {
   }
 
   return payload.data;
+}
+
+async function githubRest(endpoint, params = {}) {
+  const url = new URL(endpoint, "https://api.github.com");
+  for (const [key, value] of Object.entries(params)) {
+    url.searchParams.set(key, String(value));
+  }
+
+  const response = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${TOKEN}`,
+      Accept: "application/vnd.github+json",
+      "User-Agent": `${USERNAME}-profile-readme`,
+    },
+  });
+  const payload = await response.json();
+
+  if (!response.ok) {
+    throw new Error(JSON.stringify(payload, null, 2));
+  }
+
+  return payload;
+}
+
+async function fetchBlogPosts() {
+  try {
+    const response = await fetch(BLOG_FEED_URL, {
+      headers: {
+        "User-Agent": `${USERNAME}-profile-readme`,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`Blog feed returned HTTP ${response.status}`);
+    }
+
+    const xml = await response.text();
+    return [...xml.matchAll(/<item>([\s\S]*?)<\/item>/gi)]
+      .map((match) => {
+        const item = match[1];
+        return {
+          title: pickXmlTag(item, "title"),
+          url: absoluteUrl(pickXmlTag(item, "link")),
+          date: new Date(pickXmlTag(item, "pubDate")).toISOString().slice(0, 10),
+        };
+      })
+      .filter((post) => post.title && post.url)
+      .slice(0, BLOG_POST_LIMIT);
+  } catch (error) {
+    console.warn(`Unable to update blog posts: ${error.message}`);
+    return [];
+  }
+}
+
+function buildBlogMarkdown(posts) {
+  if (!posts.length) {
+    return `- [Visit my podcast and blog](${BLOG_URL})`;
+  }
+
+  return posts.map((post) => `- 📝 [${post.title}](${post.url}) - ${post.date}`).join("\n");
+}
+
+function restRepoToGraphqlShape(repo) {
+  return {
+    nameWithOwner: repo.full_name,
+    url: repo.html_url,
+    description: repo.description || "",
+    stargazerCount: repo.stargazers_count || 0,
+    forkCount: repo.forks_count || 0,
+    isFork: Boolean(repo.fork),
+    isArchived: Boolean(repo.archived),
+    isPrivate: Boolean(repo.private),
+    updatedAt: repo.updated_at || "",
+    pushedAt: repo.pushed_at || "",
+    primaryLanguage: repo.language ? { name: repo.language, color: "" } : null,
+  };
+}
+
+async function searchIssueRepos(queryText) {
+  const repos = new Map();
+  let page = 1;
+  let totalCount = 0;
+
+  do {
+    const payload = await githubRest("/search/issues", {
+      q: queryText,
+      per_page: 100,
+      page,
+    });
+    totalCount = Math.min(payload.total_count || 0, 1000);
+
+    for (const item of payload.items || []) {
+      const fullName = item.repository_url.split("/repos/")[1];
+      if (!fullName) continue;
+      repos.set(fullName, (repos.get(fullName) || 0) + 1);
+    }
+
+    if (!payload.items || payload.items.length < 100) break;
+    page += 1;
+  } while ((page - 1) * 100 < totalCount && page <= SEARCH_MAX_PAGES);
+
+  return repos;
+}
+
+async function fetchRepo(fullName) {
+  const [owner, repo] = fullName.split("/");
+  if (!owner || !repo) return null;
+
+  try {
+    const payload = await githubRest(`/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}`);
+    return restRepoToGraphqlShape(payload);
+  } catch {
+    return null;
+  }
+}
+
+async function addSearchContributions(repos) {
+  const searches = [
+    {
+      kind: "authoredPRs",
+      query: `author:${USERNAME} type:pr is:public -user:${USERNAME}`,
+    },
+    {
+      kind: "authoredIssues",
+      query: `author:${USERNAME} type:issue is:public -user:${USERNAME}`,
+    },
+    {
+      kind: "reviewedPRs",
+      query: `reviewed-by:${USERNAME} type:pr is:public -user:${USERNAME}`,
+    },
+  ];
+  const repoCache = new Map();
+
+  for (const search of searches) {
+    const results = await searchIssueRepos(search.query);
+
+    for (const [fullName, count] of results.entries()) {
+      if (!repoCache.has(fullName)) {
+        repoCache.set(fullName, await fetchRepo(fullName));
+      }
+
+      const repo = repoCache.get(fullName);
+      if (!repo) continue;
+
+      addSignal(repos, repo, search.kind, count);
+    }
+  }
 }
 
 async function fetchProfileData() {
@@ -291,6 +494,8 @@ async function fetchProfileData() {
     addActivity(repos, item.repository, "reviews", item.contributions.totalCount);
   }
 
+  await addSearchContributions(repos);
+
   return {
     repos: [...repos.values()].filter((repo) => !repo.isPrivate),
     collection,
@@ -303,10 +508,24 @@ function activityTotal(repo) {
   return repo.activity.commits + repo.activity.issues + repo.activity.pullRequests + repo.activity.reviews;
 }
 
+function signalTotal(repo) {
+  return repo.signals.authoredPRs + repo.signals.authoredIssues + repo.signals.reviewedPRs;
+}
+
 function sortFeatured(left, right) {
   return (
     right.stars - left.stars ||
     activityTotal(right) - activityTotal(left) ||
+    right.updatedAt.localeCompare(left.updatedAt) ||
+    left.nameWithOwner.localeCompare(right.nameWithOwner)
+  );
+}
+
+function sortExternal(left, right) {
+  return (
+    signalTotal(right) - signalTotal(left) ||
+    activityTotal(right) - activityTotal(left) ||
+    right.stars - left.stars ||
     right.updatedAt.localeCompare(left.updatedAt) ||
     left.nameWithOwner.localeCompare(right.nameWithOwner)
   );
@@ -332,6 +551,7 @@ function buildMarkdown(data) {
   const originalRepos = ownedRepos.filter((repo) => !repo.isFork);
   const forkRepos = ownedRepos.filter((repo) => repo.isFork);
   const externalRepos = data.repos.filter((repo) => repo.contributed && !repo.nameWithOwner.startsWith(`${USERNAME}/`));
+  const sortedExternalRepos = externalRepos.sort(sortExternal);
   const activeRepos = data.repos.filter((repo) => activityTotal(repo) > 0);
   const recentTotal = activeRepos.reduce((total, repo) => total + activityTotal(repo), 0);
   const featuredRepos = originalRepos
@@ -344,9 +564,17 @@ function buildMarkdown(data) {
     `📈 Recent activity covers the last **${DAYS}** days: **${recentTotal}** commits, PRs, reviews and issues across **${activeRepos.length}** repositories.`,
     "",
     ...buildSection("✨ Featured Projects", featuredRepos, { showActivity: true }),
-    ...buildSection("🤝 External Contributions", externalRepos.sort(sortFeatured).slice(0, EXTERNAL_LIMIT), {
+    ...buildSection("🤝 External Contributions", sortedExternalRepos.slice(0, EXTERNAL_LIMIT), {
+      showSignals: true,
       showActivity: true,
     }),
+    "<details>",
+    `<summary>🌐 All recognized external projects (${externalRepos.length})</summary>`,
+    "",
+    ...sortedExternalRepos.map((repo) => repoLine(repo, { showSignals: true, showActivity: true })),
+    "",
+    "</details>",
+    "",
     "<details>",
     `<summary>📚 All public repositories (${ownedRepos.length})</summary>`,
     "",
@@ -367,15 +595,25 @@ function buildMarkdown(data) {
 }
 
 const data = await fetchProfileData();
+const posts = await fetchBlogPosts();
 const readme = await readFile(README, "utf8");
-const start = readme.indexOf(START);
-const end = readme.indexOf(END);
 
-if (start === -1 || end === -1 || start > end) {
-  throw new Error(`README.md must contain ${START} and ${END} markers.`);
+function replaceSection(content, startMarker, endMarker, generated) {
+  const start = content.indexOf(startMarker);
+  const end = content.indexOf(endMarker);
+
+  if (start === -1 || end === -1 || start > end) {
+    throw new Error(`README.md must contain ${startMarker} and ${endMarker} markers.`);
+  }
+
+  return `${content.slice(0, start + startMarker.length)}\n${generated}\n${content.slice(end)}`;
 }
 
-const generated = buildMarkdown(data);
-const nextReadme = `${readme.slice(0, start + START.length)}\n${generated}\n${readme.slice(end)}`;
+const nextReadme = replaceSection(
+  replaceSection(readme, BLOG_START, BLOG_END, buildBlogMarkdown(posts)),
+  CONTRIBUTIONS_START,
+  CONTRIBUTIONS_END,
+  buildMarkdown(data),
+);
 
 await writeFile(README, nextReadme);
