@@ -16,7 +16,7 @@
 
 <!-- CONTRIBUTED_PROJECTS:START -->
 📦 Tracking **27** public repositories under `runzhliu` and **32** external public projects with recognized GitHub contributions.
-📈 Recent activity covers the last **365** days: **648** commits, PRs, reviews and issues across **7** repositories.
+📈 Recent activity covers the last **365** days: **649** commits, PRs, reviews and issues across **7** repositories.
 
 ### ✨ Featured Projects
 
@@ -37,7 +37,7 @@
 
 - **[apache/kyuubi](https://github.com/apache/kyuubi)** - Scala · ⭐ 2.3K stars · 🍴 1K forks · 8 authored PRs, 1 authored issue, 2 reviewed PRs  
   Apache Kyuubi is a distributed and multi-tenant gateway to provide serverless SQL on data warehouses and lakehouses.
-- **[kubeflow/mpi-operator](https://github.com/kubeflow/mpi-operator)** - Go · ⭐ 529 stars · 🍴 236 forks · 4 authored PRs, 1 authored issue, 2 reviewed PRs  
+- **[kubeflow/mpi-operator](https://github.com/kubeflow/mpi-operator)** - Go · ⭐ 529 stars · 🍴 237 forks · 4 authored PRs, 1 authored issue, 2 reviewed PRs  
   Kubernetes Operator for MPI-based applications (distributed training, HPC, etc.)
 - **[kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)** - Go · ⭐ 123K stars · 🍴 43K forks · 3 authored PRs, 1 reviewed PR  
   Production-Grade Container Scheduling and Management
@@ -47,11 +47,11 @@
   all of the gcr.io docker image mirror
 - **[pravega/zookeeper-operator](https://github.com/pravega/zookeeper-operator)** - Go · ⭐ 384 stars · 🍴 215 forks · 1 authored PR, 1 authored issue, 1 reviewed PR  
   Kubernetes Operator for Zookeeper
-- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 3K stars · 🍴 377 forks · 2 authored PRs · 1 commit, 2 PRs  
+- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 3K stars · 🍴 380 forks · 2 authored PRs · 1 commit, 2 PRs  
   agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes.
 - **[kubernetes/website](https://github.com/kubernetes/website)** - HTML · ⭐ 5.3K stars · 🍴 15K forks · 1 authored PR, 1 authored issue  
   Kubernetes website and documentation repo:
-- **[NVIDIA/dcgm-exporter](https://github.com/NVIDIA/dcgm-exporter)** - Go · ⭐ 1.8K stars · 🍴 307 forks · 2 authored PRs  
+- **[NVIDIA/dcgm-exporter](https://github.com/NVIDIA/dcgm-exporter)** - Go · ⭐ 1.8K stars · 🍴 308 forks · 2 authored PRs  
   NVIDIA GPU metrics exporter for Prometheus leveraging DCGM
 - **[kubernetes-sigs/scheduler-plugins](https://github.com/kubernetes-sigs/scheduler-plugins)** - Go · ⭐ 1.3K stars · 🍴 608 forks · 1 authored PR, 1 reviewed PR  
   Repository for out-of-tree scheduler plugins based on scheduler framework.
@@ -65,7 +65,7 @@
 
 - **[apache/kyuubi](https://github.com/apache/kyuubi)** - Scala · ⭐ 2.3K stars · 🍴 1K forks · 8 authored PRs, 1 authored issue, 2 reviewed PRs  
   Apache Kyuubi is a distributed and multi-tenant gateway to provide serverless SQL on data warehouses and lakehouses.
-- **[kubeflow/mpi-operator](https://github.com/kubeflow/mpi-operator)** - Go · ⭐ 529 stars · 🍴 236 forks · 4 authored PRs, 1 authored issue, 2 reviewed PRs  
+- **[kubeflow/mpi-operator](https://github.com/kubeflow/mpi-operator)** - Go · ⭐ 529 stars · 🍴 237 forks · 4 authored PRs, 1 authored issue, 2 reviewed PRs  
   Kubernetes Operator for MPI-based applications (distributed training, HPC, etc.)
 - **[kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)** - Go · ⭐ 123K stars · 🍴 43K forks · 3 authored PRs, 1 reviewed PR  
   Production-Grade Container Scheduling and Management
@@ -75,11 +75,11 @@
   all of the gcr.io docker image mirror
 - **[pravega/zookeeper-operator](https://github.com/pravega/zookeeper-operator)** - Go · ⭐ 384 stars · 🍴 215 forks · 1 authored PR, 1 authored issue, 1 reviewed PR  
   Kubernetes Operator for Zookeeper
-- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 3K stars · 🍴 377 forks · 2 authored PRs · 1 commit, 2 PRs  
+- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 3K stars · 🍴 380 forks · 2 authored PRs · 1 commit, 2 PRs  
   agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes.
 - **[kubernetes/website](https://github.com/kubernetes/website)** - HTML · ⭐ 5.3K stars · 🍴 15K forks · 1 authored PR, 1 authored issue  
   Kubernetes website and documentation repo:
-- **[NVIDIA/dcgm-exporter](https://github.com/NVIDIA/dcgm-exporter)** - Go · ⭐ 1.8K stars · 🍴 307 forks · 2 authored PRs  
+- **[NVIDIA/dcgm-exporter](https://github.com/NVIDIA/dcgm-exporter)** - Go · ⭐ 1.8K stars · 🍴 308 forks · 2 authored PRs  
   NVIDIA GPU metrics exporter for Prometheus leveraging DCGM
 - **[kubernetes-sigs/scheduler-plugins](https://github.com/kubernetes-sigs/scheduler-plugins)** - Go · ⭐ 1.3K stars · 🍴 608 forks · 1 authored PR, 1 reviewed PR  
   Repository for out-of-tree scheduler plugins based on scheduler framework.
@@ -112,13 +112,13 @@
   CSI driver for Ceph
 - **[evildecay/etcdkeeper](https://github.com/evildecay/etcdkeeper)** - JavaScript · ⭐ 1.4K stars · 🍴 252 forks · 1 authored PR  
   web ui client for etcd
-- **[tensorflow/ecosystem](https://github.com/tensorflow/ecosystem)** - Scala · ⭐ 1.4K stars · 🍴 391 forks · 1 authored issue · archived  
+- **[tensorflow/ecosystem](https://github.com/tensorflow/ecosystem)** - Scala · ⭐ 1.4K stars · 🍴 390 forks · 1 authored issue · archived  
   Integration of TensorFlow with other open-source frameworks
 - **[sighupio/permission-manager](https://github.com/sighupio/permission-manager)** - TypeScript · ⭐ 1.4K stars · 🍴 173 forks · 1 authored PR  
   Permission Manager is a project that brings sanity to Kubernetes RBAC and Users management, Web UI FTW
 - **[apache/impala](https://github.com/apache/impala)** - C++ · ⭐ 1.3K stars · 🍴 555 forks · 1 authored PR  
   Apache Impala
-- **[openebs/lvm-localpv](https://github.com/openebs/lvm-localpv)** - Go · ⭐ 344 stars · 🍴 122 forks · 1 authored PR  
+- **[openebs/lvm-localpv](https://github.com/openebs/lvm-localpv)** - Go · ⭐ 344 stars · 🍴 123 forks · 1 authored PR  
   Dynamically provision Stateful Persistent Node-Local Volumes & Filesystems for Kubernetes that is integrated with a backend LVM2 data storage stack.
 - **[virtual-kubelet/tensile-kube](https://github.com/virtual-kubelet/tensile-kube)** - Go · ⭐ 290 stars · 🍴 38 forks · 1 authored PR  
   A Kubernetes Provider
@@ -134,9 +134,9 @@
 
 #### 🧱 Original repositories
 
+- **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-07-02
 - **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 195 stars · 🍴 37 forks · 🕒 updated 2026-07-02  
   🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
-- **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-07-02
 - **[runzhliu/docker-antigravity](https://github.com/runzhliu/docker-antigravity)** - Dockerfile · ⭐ 18 stars · 🍴 3 forks · 🕒 updated 2026-05-17  
   Self-hosted Antigravity in Docker with a browser-accessible GUI via Selkies (WebRTC). No local install needed — deploy on any server or NAS.
 - **[runzhliu/helm-delete](https://github.com/runzhliu/helm-delete)** - Go · ⭐ 0 stars · 🕒 updated 2026-03-03  
@@ -186,5 +186,5 @@
 
 </details>
 
-_🕒 Last updated: 2026-07-02 UTC_
+_🕒 Last updated: 2026-07-03 UTC_
 <!-- CONTRIBUTED_PROJECTS:END -->
