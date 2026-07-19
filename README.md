@@ -16,11 +16,11 @@
 
 <!-- CONTRIBUTED_PROJECTS:START -->
 📦 Tracking **27** public repositories under `runzhliu` and **32** external public projects with recognized GitHub contributions.
-📈 Recent activity covers the last **365** days: **665** commits, PRs, reviews and issues across **7** repositories.
+📈 Recent activity covers the last **365** days: **666** commits, PRs, reviews and issues across **7** repositories.
 
 ### ✨ Featured Projects
 
-- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 208 stars · 🍴 39 forks · 604 commits, 3 issues  
+- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 210 stars · 🍴 39 forks · 604 commits, 3 issues  
   🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
 - **[runzhliu/docker-antigravity](https://github.com/runzhliu/docker-antigravity)** - Dockerfile · ⭐ 18 stars · 🍴 3 forks · 19 commits, 1 PR  
   Self-hosted Antigravity in Docker with a browser-accessible GUI via Selkies (WebRTC). No local install needed — deploy on any server or NAS.
@@ -57,7 +57,7 @@
   Repository for out-of-tree scheduler plugins based on scheduler framework.
 - **[kubeflow/xgboost-operator](https://github.com/kubeflow/xgboost-operator)** - Python · ⭐ 77 stars · 🍴 53 forks · 1 authored PR, 1 authored issue · archived  
   Incubating project for xgboost operator
-- **[jackwener/OpenCLI](https://github.com/jackwener/OpenCLI)** - JavaScript · ⭐ 27K stars · 🍴 2.6K forks · 1 authored PR · 1 commit, 1 PR  
+- **[jackwener/OpenCLI](https://github.com/jackwener/OpenCLI)** - JavaScript · ⭐ 27K stars · 🍴 2.7K forks · 1 authored PR · 1 commit, 1 PR  
   Make Any Website into CLI & Use your logged-in browser by AI agent.
 
 <details>
@@ -85,7 +85,7 @@
   Repository for out-of-tree scheduler plugins based on scheduler framework.
 - **[kubeflow/xgboost-operator](https://github.com/kubeflow/xgboost-operator)** - Python · ⭐ 77 stars · 🍴 53 forks · 1 authored PR, 1 authored issue · archived  
   Incubating project for xgboost operator
-- **[jackwener/OpenCLI](https://github.com/jackwener/OpenCLI)** - JavaScript · ⭐ 27K stars · 🍴 2.6K forks · 1 authored PR · 1 commit, 1 PR  
+- **[jackwener/OpenCLI](https://github.com/jackwener/OpenCLI)** - JavaScript · ⭐ 27K stars · 🍴 2.7K forks · 1 authored PR · 1 commit, 1 PR  
   Make Any Website into CLI & Use your logged-in browser by AI agent.
 - **[apache/spark](https://github.com/apache/spark)** - Scala · ⭐ 44K stars · 🍴 29K forks · 1 authored PR  
   Apache Spark - A unified analytics engine for large-scale data processing
@@ -134,9 +134,9 @@
 
 #### 🧱 Original repositories
 
-- **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-07-17
-- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 208 stars · 🍴 39 forks · 🕒 updated 2026-07-15  
+- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 210 stars · 🍴 39 forks · 🕒 updated 2026-07-19  
   🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
+- **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-07-18
 - **[runzhliu/docker-antigravity](https://github.com/runzhliu/docker-antigravity)** - Dockerfile · ⭐ 18 stars · 🍴 3 forks · 🕒 updated 2026-05-17  
   Self-hosted Antigravity in Docker with a browser-accessible GUI via Selkies (WebRTC). No local install needed — deploy on any server or NAS.
 - **[runzhliu/helm-delete](https://github.com/runzhliu/helm-delete)** - Go · ⭐ 0 stars · 🕒 updated 2026-03-03  
@@ -186,5 +186,5 @@
 
 </details>
 
-_🕒 Last updated: 2026-07-18 UTC_
+_🕒 Last updated: 2026-07-19 UTC_
 <!-- CONTRIBUTED_PROJECTS:END -->
