@@ -16,11 +16,11 @@
 
 <!-- CONTRIBUTED_PROJECTS:START -->
 📦 Tracking **27** public repositories under `runzhliu` and **32** external public projects with recognized GitHub contributions.
-📈 Recent activity covers the last **365** days: **670** commits, PRs, reviews and issues across **7** repositories.
+📈 Recent activity covers the last **365** days: **671** commits, PRs, reviews and issues across **7** repositories.
 
 ### ✨ Featured Projects
 
-- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 223 stars · 🍴 39 forks · 604 commits, 3 issues  
+- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 227 stars · 🍴 42 forks · 604 commits, 3 issues  
   🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
 - **[runzhliu/docker-antigravity](https://github.com/runzhliu/docker-antigravity)** - Dockerfile · ⭐ 18 stars · 🍴 3 forks · 19 commits, 1 PR  
   Self-hosted Antigravity in Docker with a browser-accessible GUI via Selkies (WebRTC). No local install needed — deploy on any server or NAS.
@@ -96,7 +96,7 @@
 - **[timqian/chinese-independent-blogs](https://github.com/timqian/chinese-independent-blogs)** - Python · ⭐ 24K stars · 🍴 2.7K forks · 1 authored PR  
   中文独立博客列表
 - **[labring/sealos](https://github.com/labring/sealos)** - TypeScript · ⭐ 18K stars · 🍴 2.5K forks · 1 authored PR  
-  Sealos is an AI-native Cloud Operating System that unifies the entire application lifecycle, from development in cloud IDEs to production deploymen...
+  Deploy real projects from GitHub or your AI coding agent, then keep them running with AI-powered operations.
 - **[prestodb/presto](https://github.com/prestodb/presto)** - Java · ⭐ 17K stars · 🍴 5.5K forks · 1 authored issue  
   The official home of the Presto distributed SQL query engine for big data
 - **[rook/rook](https://github.com/rook/rook)** - Go · ⭐ 14K stars · 🍴 2.8K forks · 1 authored issue  
@@ -108,7 +108,7 @@
   Kubernetes operator for managing the lifecycle of Apache Spark applications on Kubernetes.
 - **[kubeovn/kube-ovn](https://github.com/kubeovn/kube-ovn)** - Go · ⭐ 2.4K stars · 🍴 544 forks · 1 authored PR  
   A Bridge between SDN and Cloud Native (Project under CNCF)
-- **[ceph/ceph-csi](https://github.com/ceph/ceph-csi)** - Go · ⭐ 1.6K stars · 🍴 607 forks · 1 authored PR  
+- **[ceph/ceph-csi](https://github.com/ceph/ceph-csi)** - Go · ⭐ 1.6K stars · 🍴 608 forks · 1 authored PR  
   CSI driver for Ceph
 - **[evildecay/etcdkeeper](https://github.com/evildecay/etcdkeeper)** - JavaScript · ⭐ 1.4K stars · 🍴 252 forks · 1 authored PR  
   web ui client for etcd
@@ -134,9 +134,9 @@
 
 #### 🧱 Original repositories
 
-- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 223 stars · 🍴 39 forks · 🕒 updated 2026-07-23  
+- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 227 stars · 🍴 42 forks · 🕒 updated 2026-07-24  
   🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
-- **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-07-22
+- **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-07-23
 - **[runzhliu/docker-antigravity](https://github.com/runzhliu/docker-antigravity)** - Dockerfile · ⭐ 18 stars · 🍴 3 forks · 🕒 updated 2026-05-17  
   Self-hosted Antigravity in Docker with a browser-accessible GUI via Selkies (WebRTC). No local install needed — deploy on any server or NAS.
 - **[runzhliu/helm-delete](https://github.com/runzhliu/helm-delete)** - Go · ⭐ 0 stars · 🕒 updated 2026-03-03  
@@ -186,5 +186,5 @@
 
 </details>
 
-_🕒 Last updated: 2026-07-23 UTC_
+_🕒 Last updated: 2026-07-24 UTC_
 <!-- CONTRIBUTED_PROJECTS:END -->
