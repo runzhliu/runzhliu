@@ -16,7 +16,7 @@
 
 <!-- CONTRIBUTED_PROJECTS:START -->
 📦 Tracking **28** public repositories under `runzhliu` and **32** external public projects with recognized GitHub contributions.
-📈 Recent activity covers the last **365** days: **685** commits, PRs, reviews and issues across **7** repositories.
+📈 Recent activity covers the last **365** days: **697** commits, PRs, reviews and issues across **8** repositories.
 
 ### ✨ Featured Projects
 
@@ -29,9 +29,9 @@
 - **[runzhliu/dok](https://github.com/runzhliu/dok)** - ⭐ 3 stars  
   Deployer of Kubernetes Cluster
 - **[runzhliu/container-log-server](https://github.com/runzhliu/container-log-server)** - Go · ⭐ 2 stars
-- **[runzhliu/kube-everything](https://github.com/runzhliu/kube-everything)** - Shell · ⭐ 1 star · 1 commit
-- **[runzhliu/helm-delete](https://github.com/runzhliu/helm-delete)** - Go · ⭐ 0 stars · 4 commits  
+- **[runzhliu/helm-delete](https://github.com/runzhliu/helm-delete)** - Go · ⭐ 1 star · 9 commits  
   A Helm plugin to delete chart versions from ChartMuseum — the missing counterpart to helm cm-push.
+- **[runzhliu/kube-everything](https://github.com/runzhliu/kube-everything)** - Shell · ⭐ 1 star · 1 commit
 
 ### 🤝 External Contributions
 
@@ -47,7 +47,7 @@
   all of the gcr.io docker image mirror
 - **[pravega/zookeeper-operator](https://github.com/pravega/zookeeper-operator)** - Go · ⭐ 384 stars · 🍴 216 forks · 1 authored PR, 1 authored issue, 1 reviewed PR  
   Kubernetes Operator for Zookeeper
-- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 3.4K stars · 🍴 428 forks · 2 authored PRs · 1 commit, 2 PRs  
+- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 3.4K stars · 🍴 429 forks · 2 authored PRs · 1 commit, 2 PRs  
   agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes.
 - **[kubernetes/website](https://github.com/kubernetes/website)** - HTML · ⭐ 5.3K stars · 🍴 16K forks · 1 authored PR, 1 authored issue  
   Kubernetes website and documentation repo:
@@ -75,7 +75,7 @@
   all of the gcr.io docker image mirror
 - **[pravega/zookeeper-operator](https://github.com/pravega/zookeeper-operator)** - Go · ⭐ 384 stars · 🍴 216 forks · 1 authored PR, 1 authored issue, 1 reviewed PR  
   Kubernetes Operator for Zookeeper
-- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 3.4K stars · 🍴 428 forks · 2 authored PRs · 1 commit, 2 PRs  
+- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 3.4K stars · 🍴 429 forks · 2 authored PRs · 1 commit, 2 PRs  
   agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes.
 - **[kubernetes/website](https://github.com/kubernetes/website)** - HTML · ⭐ 5.3K stars · 🍴 16K forks · 1 authored PR, 1 authored issue  
   Kubernetes website and documentation repo:
@@ -134,14 +134,14 @@
 
 #### 🧱 Original repositories
 
+- **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - HTML · ⭐ 0 stars · 🕒 updated 2026-08-03
+- **[runzhliu/helm-delete](https://github.com/runzhliu/helm-delete)** - Go · ⭐ 1 star · 🕒 updated 2026-08-03  
+  A Helm plugin to delete chart versions from ChartMuseum — the missing counterpart to helm cm-push.
+- **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-08-02
 - **[runzhliu/docker-antigravity](https://github.com/runzhliu/docker-antigravity)** - Dockerfile · ⭐ 19 stars · 🍴 3 forks · 🕒 updated 2026-08-01  
   Self-hosted Antigravity in Docker with a browser-accessible GUI via Selkies (WebRTC). No local install needed — deploy on any server or NAS.
-- **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-08-01
-- **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - ⭐ 0 stars · 🕒 updated 2026-08-01
 - **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 239 stars · 🍴 44 forks · 🕒 updated 2026-07-29  
   🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
-- **[runzhliu/helm-delete](https://github.com/runzhliu/helm-delete)** - Go · ⭐ 0 stars · 🕒 updated 2026-03-03  
-  A Helm plugin to delete chart versions from ChartMuseum — the missing counterpart to helm cm-push.
 - **[runzhliu/kube-everything](https://github.com/runzhliu/kube-everything)** - Shell · ⭐ 1 star · 🕒 updated 2025-08-11
 - **[runzhliu/nightingale-helm](https://github.com/runzhliu/nightingale-helm)** - Smarty · ⭐ 1 star · 🍴 1 fork · 🕒 updated 2025-07-02 · archived
 - **[runzhliu/kubernetes-the-hard-way-in-chinese](https://github.com/runzhliu/kubernetes-the-hard-way-in-chinese)** - ⭐ 0 stars · 🕒 updated 2024-10-07
@@ -187,5 +187,5 @@
 
 </details>
 
-_🕒 Last updated: 2026-08-02 UTC_
+_🕒 Last updated: 2026-08-03 UTC_
 <!-- CONTRIBUTED_PROJECTS:END -->
