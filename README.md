@@ -16,11 +16,11 @@
 
 <!-- CONTRIBUTED_PROJECTS:START -->
 📦 Tracking **28** public repositories under `runzhliu` and **32** external public projects with recognized GitHub contributions.
-📈 Recent activity covers the last **365** days: **739** commits, PRs, reviews and issues across **8** repositories.
+📈 Recent activity covers the last **365** days: **752** commits, PRs, reviews and issues across **8** repositories.
 
 ### ✨ Featured Projects
 
-- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 242 stars · 🍴 45 forks · 609 commits, 3 issues  
+- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 244 stars · 🍴 45 forks · 609 commits, 3 issues  
   🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
 - **[runzhliu/docker-antigravity](https://github.com/runzhliu/docker-antigravity)** - Dockerfile · ⭐ 19 stars · 🍴 3 forks · 19 commits, 1 PR  
   Self-hosted Antigravity in Docker with a browser-accessible GUI via Selkies (WebRTC). No local install needed — deploy on any server or NAS.
@@ -28,7 +28,7 @@
 - **[runzhliu/yum-with-browser](https://github.com/runzhliu/yum-with-browser)** - Dockerfile · ⭐ 4 stars
 - **[runzhliu/dok](https://github.com/runzhliu/dok)** - ⭐ 3 stars  
   Deployer of Kubernetes Cluster
-- **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - HTML · ⭐ 2 stars · 🍴 1 fork · 44 commits  
+- **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - HTML · ⭐ 2 stars · 🍴 1 fork · 56 commits  
   AI/LLM on Kubernetes 基础设施知识库：涵盖 GPU、大数据、调度、分布式训练、LLM 推理、RAG、Agent 与生产运维。
 - **[runzhliu/container-log-server](https://github.com/runzhliu/container-log-server)** - Go · ⭐ 2 stars
 - **[runzhliu/helm-delete](https://github.com/runzhliu/helm-delete)** - Go · ⭐ 1 star · 9 commits  
@@ -109,7 +109,7 @@
   Kubernetes operator for managing the lifecycle of Apache Spark applications on Kubernetes.
 - **[kubeovn/kube-ovn](https://github.com/kubeovn/kube-ovn)** - Go · ⭐ 2.4K stars · 🍴 547 forks · 1 authored PR  
   A Bridge between SDN and Cloud Native (Project under CNCF)
-- **[ceph/ceph-csi](https://github.com/ceph/ceph-csi)** - Go · ⭐ 1.6K stars · 🍴 610 forks · 1 authored PR  
+- **[ceph/ceph-csi](https://github.com/ceph/ceph-csi)** - Go · ⭐ 1.6K stars · 🍴 609 forks · 1 authored PR  
   CSI driver for Ceph
 - **[evildecay/etcdkeeper](https://github.com/evildecay/etcdkeeper)** - JavaScript · ⭐ 1.4K stars · 🍴 252 forks · 1 authored PR  
   web ui client for etcd
@@ -135,11 +135,11 @@
 
 #### 🧱 Original repositories
 
-- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 242 stars · 🍴 45 forks · 🕒 updated 2026-08-07  
-  🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
-- **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - HTML · ⭐ 2 stars · 🍴 1 fork · 🕒 updated 2026-08-06  
+- **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - HTML · ⭐ 2 stars · 🍴 1 fork · 🕒 updated 2026-08-08  
   AI/LLM on Kubernetes 基础设施知识库：涵盖 GPU、大数据、调度、分布式训练、LLM 推理、RAG、Agent 与生产运维。
-- **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-08-06
+- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 244 stars · 🍴 45 forks · 🕒 updated 2026-08-07  
+  🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
+- **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-08-07
 - **[runzhliu/helm-delete](https://github.com/runzhliu/helm-delete)** - Go · ⭐ 1 star · 🕒 updated 2026-08-03  
   A Helm plugin to delete chart versions from ChartMuseum — the missing counterpart to helm cm-push.
 - **[runzhliu/docker-antigravity](https://github.com/runzhliu/docker-antigravity)** - Dockerfile · ⭐ 19 stars · 🍴 3 forks · 🕒 updated 2026-08-01  
@@ -189,5 +189,5 @@
 
 </details>
 
-_🕒 Last updated: 2026-08-07 UTC_
+_🕒 Last updated: 2026-08-08 UTC_
 <!-- CONTRIBUTED_PROJECTS:END -->
