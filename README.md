@@ -4,9 +4,15 @@
 
 ## 🎙️ Podcast & Blog
 
-🏠 [runzhliu.cn](https://runzhliu.cn/)
-
 <!-- BLOG_POSTS:START -->
+### ☘️ [aik8s.run](https://aik8s.run/)
+
+- 📝 [2026 年 AI Agent 现状、实现原理与趋势](https://aik8s.run/ai-k8s/rag-agent/agent-landscape-2026/) - 2026-08-10
+- 📝 [DeepSeek-V4-Flash-0731 的 H20 部署与压测](https://aik8s.run/ai-k8s/practices/deepseek-v4-flash-h20-evaluation/) - 2026-08-10
+- 📝 [RBG 多角色推理编排：从 CPU 控制面到生产 GPU 实测](https://aik8s.run/ai-k8s/practices/rbg-existing-cluster/) - 2026-08-10
+
+### 🏠 [runzhliu.cn](https://runzhliu.cn/)
+
 - 📝 [openclaw-weixin插件深度分析报告](https://www.runzhliu.cn/openclaw-weixin%E6%8F%92%E4%BB%B6%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A/) - 2026-03-21
 - 📝 [WeLink-帮你分析自己的的微信聊天记录](https://www.runzhliu.cn/welink-%E5%B8%AE%E4%BD%A0%E5%88%86%E6%9E%90%E8%87%AA%E5%B7%B1%E7%9A%84%E7%9A%84%E5%BE%AE%E4%BF%A1%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95/) - 2026-03-17
 - 📝 [我把Antigravity装进Docker还顺便解决了音频问题](https://www.runzhliu.cn/%E6%88%91%E6%8A%8Aantigravity%E8%A3%85%E8%BF%9Bdocker%E8%BF%98%E9%A1%BA%E4%BE%BF%E8%A7%A3%E5%86%B3%E4%BA%86%E9%9F%B3%E9%A2%91%E9%97%AE%E9%A2%98/) - 2026-03-04

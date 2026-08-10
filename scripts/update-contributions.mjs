@@ -11,6 +11,24 @@ const CONTRIBUTIONS_END = "<!-- CONTRIBUTED_PROJECTS:END -->";
 const BLOG_URL = process.env.BLOG_URL || "https://runzhliu.cn/";
 const BLOG_FEED_URL = process.env.BLOG_FEED_URL || "https://runzhliu.cn/index.xml";
 const BLOG_POST_LIMIT = Number.parseInt(process.env.BLOG_POST_LIMIT || "3", 10);
+const BLOG_SITES = [
+  {
+    name: "aik8s.run",
+    icon: "☘️",
+    url: process.env.AIK8S_URL || "https://aik8s.run/",
+    feedUrl: process.env.AIK8S_FEED_URL || "https://aik8s.run/rss.xml",
+    // The feed also contains the homepage and section landing pages. Actual
+    // articles live at /ai-k8s/<section>/<slug>/.
+    minPathSegments: 3,
+  },
+  {
+    name: "runzhliu.cn",
+    icon: "🏠",
+    url: BLOG_URL,
+    feedUrl: BLOG_FEED_URL,
+    minPathSegments: 1,
+  },
+];
 const DAYS = Number.parseInt(process.env.CONTRIBUTION_DAYS || "365", 10);
 const FEATURED_LIMIT = Number.parseInt(process.env.FEATURED_REPO_LIMIT || "8", 10);
 const EXTERNAL_LIMIT = Number.parseInt(process.env.EXTERNAL_REPO_LIMIT || "12", 10);
@@ -221,8 +239,8 @@ function pickXmlTag(xml, tagName) {
   return decodeHtml(match?.[1] || "");
 }
 
-function absoluteUrl(url) {
-  return new URL(url, BLOG_URL).toString();
+function absoluteUrl(url, baseUrl) {
+  return new URL(url, baseUrl).toString();
 }
 
 function formatNumber(value) {
@@ -321,16 +339,16 @@ async function githubRest(endpoint, params = {}) {
   return payload;
 }
 
-async function fetchBlogPosts() {
+async function fetchBlogPosts(site) {
   try {
-    const response = await fetch(BLOG_FEED_URL, {
+    const response = await fetch(site.feedUrl, {
       headers: {
         "User-Agent": `${USERNAME}-profile-readme`,
       },
     });
 
     if (!response.ok) {
-      throw new Error(`Blog feed returned HTTP ${response.status}`);
+      throw new Error(`${site.name} feed returned HTTP ${response.status}`);
     }
 
     const xml = await response.text();
@@ -339,24 +357,32 @@ async function fetchBlogPosts() {
         const item = match[1];
         return {
           title: pickXmlTag(item, "title"),
-          url: absoluteUrl(pickXmlTag(item, "link")),
+          url: absoluteUrl(pickXmlTag(item, "link"), site.url),
           date: new Date(pickXmlTag(item, "pubDate")).toISOString().slice(0, 10),
         };
       })
       .filter((post) => post.title && post.url)
+      .filter(
+        (post) =>
+          new URL(post.url).pathname.split("/").filter(Boolean).length >= site.minPathSegments,
+      )
       .slice(0, BLOG_POST_LIMIT);
   } catch (error) {
-    console.warn(`Unable to update blog posts: ${error.message}`);
+    console.warn(`Unable to update ${site.name} posts: ${error.message}`);
     return [];
   }
 }
 
-function buildBlogMarkdown(posts) {
-  if (!posts.length) {
-    return `- [Visit my podcast and blog](${BLOG_URL})`;
-  }
-
-  return posts.map((post) => `- 📝 [${post.title}](${post.url}) - ${post.date}`).join("\n");
+function buildBlogMarkdown(sitePosts) {
+  return sitePosts
+    .map(({ site, posts }) => {
+      const heading = `### ${site.icon} [${site.name}](${site.url})`;
+      const links = posts.length
+        ? posts.map((post) => `- 📝 [${post.title}](${post.url}) - ${post.date}`).join("\n")
+        : `- [Visit ${site.name}](${site.url})`;
+      return `${heading}\n\n${links}`;
+    })
+    .join("\n\n");
 }
 
 function restRepoToGraphqlShape(repo) {
@@ -595,7 +621,9 @@ function buildMarkdown(data) {
 }
 
 const data = await fetchProfileData();
-const posts = await fetchBlogPosts();
+const sitePosts = await Promise.all(
+  BLOG_SITES.map(async (site) => ({ site, posts: await fetchBlogPosts(site) })),
+);
 const readme = await readFile(README, "utf8");
 
 function replaceSection(content, startMarker, endMarker, generated) {
@@ -610,7 +638,7 @@ function replaceSection(content, startMarker, endMarker, generated) {
 }
 
 const nextReadme = replaceSection(
-  replaceSection(readme, BLOG_START, BLOG_END, buildBlogMarkdown(posts)),
+  replaceSection(readme, BLOG_START, BLOG_END, buildBlogMarkdown(sitePosts)),
   CONTRIBUTIONS_START,
   CONTRIBUTIONS_END,
   buildMarkdown(data),
