@@ -7,9 +7,9 @@
 <!-- BLOG_POSTS:START -->
 ### ☘️ [aik8s.run](https://aik8s.run/)
 
+- 📝 [MiMo-V2.6-Pro-RL 首测：八张 H20-3e 的 vLLM 部署与性能实测](https://aik8s.run/ai-k8s/practices/mimo-v26-pro-rl-h20-first-test/) - 2026-09-26
 - 📝 [Harbor Agent 评测框架综述：从沙箱任务、Verifier 到大规模 Rollout](https://aik8s.run/ai-k8s/rag-agent/harbor-agent-evaluation-framework/) - 2026-09-23
 - 📝 [MiMo-V2.6-Flash-RL Day 0：4 卡与 8 卡 H20-3e 部署实测](https://aik8s.run/ai-k8s/practices/mimo-v26-flash-rl-h20-day0/) - 2026-09-23
-- 📝 [Qwen-Image-2.1：单卡 L20 的 SGLang 与 vLLM-Omni 实测](https://aik8s.run/ai-k8s/practices/qwen-image21-l20-benchmark/) - 2026-09-22
 
 ### 🏠 [runzhliu.cn](https://runzhliu.cn/)
 
@@ -22,17 +22,17 @@
 
 <!-- CONTRIBUTED_PROJECTS:START -->
 📦 Tracking **29** public repositories under `runzhliu` and **34** external public projects with recognized GitHub contributions.
-📈 Recent activity covers the last **365** days: **1043** commits, PRs, reviews and issues across **10** repositories.
+📈 Recent activity covers the last **365** days: **1045** commits, PRs, reviews and issues across **10** repositories.
 
 ### ✨ Featured Projects
 
-- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 281 stars · 🍴 58 forks · 610 commits, 3 issues  
+- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 282 stars · 🍴 58 forks · 610 commits, 3 issues  
   🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
 - **[runzhliu/deepseek-harness-docker](https://github.com/runzhliu/deepseek-harness-docker)** - Shell · ⭐ 93 stars · 🍴 9 forks · 45 commits, 11 PRs  
   Community Docker and Kubernetes packaging for DeepSeek Harness (@deepseek-ai/dsh), with a hardened image, Compose stack, Helm chart, Web UI, and he...
 - **[runzhliu/docker-antigravity](https://github.com/runzhliu/docker-antigravity)** - Dockerfile · ⭐ 21 stars · 🍴 4 forks · 19 commits, 1 PR  
   Self-hosted Antigravity in Docker with a browser-accessible GUI via Selkies (WebRTC). No local install needed — deploy on any server or NAS.
-- **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - Python · ⭐ 18 stars · 🍴 3 forks · 220 commits, 1 PR  
+- **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - Python · ⭐ 18 stars · 🍴 3 forks · 221 commits, 1 PR  
   AI/LLM on Kubernetes 基础设施知识库：涵盖 GPU、大数据、调度、分布式训练、LLM 推理、RAG、Agent 与生产运维。
 - **[runzhliu/read-the-books](https://github.com/runzhliu/read-the-books)** - ⭐ 10 stars
 - **[runzhliu/yum-with-browser](https://github.com/runzhliu/yum-with-browser)** - Dockerfile · ⭐ 4 stars
@@ -54,7 +54,7 @@
   all of the gcr.io docker image mirror
 - **[pravega/zookeeper-operator](https://github.com/pravega/zookeeper-operator)** - Go · ⭐ 383 stars · 🍴 219 forks · 1 authored PR, 1 authored issue, 1 reviewed PR  
   Kubernetes Operator for Zookeeper
-- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 4K stars · 🍴 526 forks · 2 authored PRs · 1 commit, 2 PRs  
+- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 4K stars · 🍴 528 forks · 2 authored PRs · 1 commit, 2 PRs  
   agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes and reinforcement lear...
 - **[kubernetes/website](https://github.com/kubernetes/website)** - HTML · ⭐ 5.4K stars · 🍴 16K forks · 1 authored PR, 1 authored issue  
   Kubernetes website and documentation repo:
@@ -82,7 +82,7 @@
   all of the gcr.io docker image mirror
 - **[pravega/zookeeper-operator](https://github.com/pravega/zookeeper-operator)** - Go · ⭐ 383 stars · 🍴 219 forks · 1 authored PR, 1 authored issue, 1 reviewed PR  
   Kubernetes Operator for Zookeeper
-- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 4K stars · 🍴 526 forks · 2 authored PRs · 1 commit, 2 PRs  
+- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 4K stars · 🍴 528 forks · 2 authored PRs · 1 commit, 2 PRs  
   agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes and reinforcement lear...
 - **[kubernetes/website](https://github.com/kubernetes/website)** - HTML · ⭐ 5.4K stars · 🍴 16K forks · 1 authored PR, 1 authored issue  
   Kubernetes website and documentation repo:
@@ -115,7 +115,7 @@
   Kubernetes operator for managing the lifecycle of Apache Spark applications on Kubernetes.
 - **[kubeovn/kube-ovn](https://github.com/kubeovn/kube-ovn)** - Go · ⭐ 2.4K stars · 🍴 551 forks · 1 authored PR  
   A Bridge between SDN and Cloud Native (Project under CNCF)
-- **[ceph/ceph-csi](https://github.com/ceph/ceph-csi)** - Go · ⭐ 1.6K stars · 🍴 619 forks · 1 authored PR  
+- **[ceph/ceph-csi](https://github.com/ceph/ceph-csi)** - Go · ⭐ 1.6K stars · 🍴 620 forks · 1 authored PR  
   CSI driver for Ceph
 - **[evildecay/etcdkeeper](https://github.com/evildecay/etcdkeeper)** - JavaScript · ⭐ 1.4K stars · 🍴 250 forks · 1 authored PR  
   web ui client for etcd
@@ -145,13 +145,13 @@
 
 #### 🧱 Original repositories
 
+- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 282 stars · 🍴 58 forks · 🕒 updated 2026-09-26  
+  🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
+- **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - Python · ⭐ 18 stars · 🍴 3 forks · 🕒 updated 2026-09-26  
+  AI/LLM on Kubernetes 基础设施知识库：涵盖 GPU、大数据、调度、分布式训练、LLM 推理、RAG、Agent 与生产运维。
+- **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-09-25
 - **[runzhliu/deepseek-harness-docker](https://github.com/runzhliu/deepseek-harness-docker)** - Shell · ⭐ 93 stars · 🍴 9 forks · 🕒 updated 2026-09-24  
   Community Docker and Kubernetes packaging for DeepSeek Harness (@deepseek-ai/dsh), with a hardened image, Compose stack, Helm chart, Web UI, and he...
-- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 281 stars · 🍴 58 forks · 🕒 updated 2026-09-24  
-  🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
-- **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-09-24
-- **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - Python · ⭐ 18 stars · 🍴 3 forks · 🕒 updated 2026-09-23  
-  AI/LLM on Kubernetes 基础设施知识库：涵盖 GPU、大数据、调度、分布式训练、LLM 推理、RAG、Agent 与生产运维。
 - **[runzhliu/docker-antigravity](https://github.com/runzhliu/docker-antigravity)** - Dockerfile · ⭐ 21 stars · 🍴 4 forks · 🕒 updated 2026-09-23  
   Self-hosted Antigravity in Docker with a browser-accessible GUI via Selkies (WebRTC). No local install needed — deploy on any server or NAS.
 - **[runzhliu/helm-delete](https://github.com/runzhliu/helm-delete)** - Go · ⭐ 1 star · 🕒 updated 2026-08-03  
@@ -201,5 +201,5 @@
 
 </details>
 
-_🕒 Last updated: 2026-09-25 UTC_
+_🕒 Last updated: 2026-09-26 UTC_
 <!-- CONTRIBUTED_PROJECTS:END -->
