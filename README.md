@@ -7,9 +7,9 @@
 <!-- BLOG_POSTS:START -->
 ### ☘️ [aik8s.run](https://aik8s.run/)
 
-- 📝 [vLLM Sleep 单卡双模型实测：恢复耗时、显存与 DRA 设计](https://aik8s.run/ai-k8s/practices/vllm-sleep-model-switch-l20/) - 2026-10-09
-- 📝 [Jev 每周回顾](https://aik8s.run/ai-k8s/rag-agent/jev-weekly-review/) - 2026-10-07
-- 📝 [Jev 技术综述：不生成文本的 System One 决策模型](https://aik8s.run/ai-k8s/rag-agent/jev-system-one-model-overview/) - 2026-10-07
+- 📝 [Contiv、OVS 与 Cilium 串联网络实战：kube-proxy 为什么可能接不到报文](https://aik8s.run/ai-k8s/practices/contiv-ovs-cilium-network/) - 2026-10-10
+- 📝 [大规模 Kubernetes 调度器优化：从队列积压到并行调度架构](https://aik8s.run/ai-k8s/practices/large-scale-kubernetes-scheduler-optimization/) - 2026-10-10
+- 📝 [配图计划与来源](https://aik8s.run/assets/practices/large-scale-kubernetes-scheduler/README/) - 2026-10-10
 
 ### 🏠 [runzhliu.cn](https://runzhliu.cn/)
 
@@ -22,17 +22,17 @@
 
 <!-- CONTRIBUTED_PROJECTS:START -->
 📦 Tracking **29** public repositories under `runzhliu` and **34** external public projects with recognized GitHub contributions.
-📈 Recent activity covers the last **365** days: **1069** commits, PRs, reviews and issues across **10** repositories.
+📈 Recent activity covers the last **365** days: **1080** commits, PRs, reviews and issues across **10** repositories.
 
 ### ✨ Featured Projects
 
-- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 291 stars · 🍴 61 forks · 610 commits, 3 issues  
+- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 292 stars · 🍴 61 forks · 610 commits, 3 issues  
   🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
-- **[runzhliu/deepseek-harness-docker](https://github.com/runzhliu/deepseek-harness-docker)** - Shell · ⭐ 110 stars · 🍴 11 forks · 51 commits, 11 PRs  
+- **[runzhliu/deepseek-harness-docker](https://github.com/runzhliu/deepseek-harness-docker)** - Shell · ⭐ 110 stars · 🍴 11 forks · 53 commits, 11 PRs  
   Community Docker and Kubernetes packaging for DeepSeek Harness (@deepseek-ai/dsh), with a hardened image, Compose stack, Helm chart, Web UI, and he...
 - **[runzhliu/docker-antigravity](https://github.com/runzhliu/docker-antigravity)** - Dockerfile · ⭐ 21 stars · 🍴 4 forks · 19 commits, 1 PR  
   Self-hosted Antigravity in Docker with a browser-accessible GUI via Selkies (WebRTC). No local install needed — deploy on any server or NAS.
-- **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - Python · ⭐ 18 stars · 🍴 3 forks · 226 commits, 1 PR  
+- **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - Python · ⭐ 18 stars · 🍴 3 forks · 232 commits, 1 PR  
   AI/LLM on Kubernetes 基础设施知识库：涵盖 GPU、大数据、调度、分布式训练、LLM 推理、RAG、Agent 与生产运维。
 - **[runzhliu/read-the-books](https://github.com/runzhliu/read-the-books)** - ⭐ 10 stars
 - **[runzhliu/yum-with-browser](https://github.com/runzhliu/yum-with-browser)** - Dockerfile · ⭐ 4 stars
@@ -46,7 +46,7 @@
   Apache Kyuubi is a distributed and multi-tenant gateway to provide serverless SQL on data warehouses and lakehouses.
 - **[kubeflow/mpi-operator](https://github.com/kubeflow/mpi-operator)** - Go · ⭐ 539 stars · 🍴 239 forks · 4 authored PRs, 1 authored issue, 2 reviewed PRs  
   Kubernetes Operator for MPI-based applications (distributed training, HPC, etc.)
-- **[kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)** - Go · ⭐ 128K stars · 🍴 46K forks · 3 authored PRs, 1 reviewed PR  
+- **[kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)** - Go · ⭐ 128K stars · 🍴 47K forks · 3 authored PRs, 1 reviewed PR  
   Production-Grade Container Scheduling and Management
 - **[apache/carbondata](https://github.com/apache/carbondata)** - Scala · ⭐ 1.5K stars · 🍴 695 forks · 3 authored PRs, 1 reviewed PR  
   High performance data store solution
@@ -54,7 +54,7 @@
   all of the gcr.io docker image mirror
 - **[pravega/zookeeper-operator](https://github.com/pravega/zookeeper-operator)** - Go · ⭐ 383 stars · 🍴 219 forks · 1 authored PR, 1 authored issue, 1 reviewed PR  
   Kubernetes Operator for Zookeeper
-- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 4.2K stars · 🍴 548 forks · 2 authored PRs · 1 commit, 2 PRs  
+- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 4.2K stars · 🍴 547 forks · 2 authored PRs · 1 commit, 2 PRs  
   agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes and reinforcement lear...
 - **[kubernetes/website](https://github.com/kubernetes/website)** - HTML · ⭐ 5.4K stars · 🍴 16K forks · 1 authored PR, 1 authored issue  
   Kubernetes website and documentation repo:
@@ -74,7 +74,7 @@
   Apache Kyuubi is a distributed and multi-tenant gateway to provide serverless SQL on data warehouses and lakehouses.
 - **[kubeflow/mpi-operator](https://github.com/kubeflow/mpi-operator)** - Go · ⭐ 539 stars · 🍴 239 forks · 4 authored PRs, 1 authored issue, 2 reviewed PRs  
   Kubernetes Operator for MPI-based applications (distributed training, HPC, etc.)
-- **[kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)** - Go · ⭐ 128K stars · 🍴 46K forks · 3 authored PRs, 1 reviewed PR  
+- **[kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)** - Go · ⭐ 128K stars · 🍴 47K forks · 3 authored PRs, 1 reviewed PR  
   Production-Grade Container Scheduling and Management
 - **[apache/carbondata](https://github.com/apache/carbondata)** - Scala · ⭐ 1.5K stars · 🍴 695 forks · 3 authored PRs, 1 reviewed PR  
   High performance data store solution
@@ -82,7 +82,7 @@
   all of the gcr.io docker image mirror
 - **[pravega/zookeeper-operator](https://github.com/pravega/zookeeper-operator)** - Go · ⭐ 383 stars · 🍴 219 forks · 1 authored PR, 1 authored issue, 1 reviewed PR  
   Kubernetes Operator for Zookeeper
-- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 4.2K stars · 🍴 548 forks · 2 authored PRs · 1 commit, 2 PRs  
+- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 4.2K stars · 🍴 547 forks · 2 authored PRs · 1 commit, 2 PRs  
   agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes and reinforcement lear...
 - **[kubernetes/website](https://github.com/kubernetes/website)** - HTML · ⭐ 5.4K stars · 🍴 16K forks · 1 authored PR, 1 authored issue  
   Kubernetes website and documentation repo:
@@ -113,27 +113,27 @@
   An open-source storage framework that enables building a Lakehouse architecture with compute engines including Spark, PrestoDB, Flink, Trino, and H...
 - **[kubeflow/spark-operator](https://github.com/kubeflow/spark-operator)** - Python · ⭐ 3.2K stars · 🍴 1.5K forks · 1 authored PR  
   Kubernetes operator for managing the lifecycle of Apache Spark applications on Kubernetes.
-- **[kubeovn/kube-ovn](https://github.com/kubeovn/kube-ovn)** - Go · ⭐ 2.4K stars · 🍴 554 forks · 1 authored PR  
+- **[kubeovn/kube-ovn](https://github.com/kubeovn/kube-ovn)** - Go · ⭐ 2.4K stars · 🍴 556 forks · 1 authored PR  
   A Bridge between SDN and Cloud Native (Project under CNCF)
-- **[ceph/ceph-csi](https://github.com/ceph/ceph-csi)** - Go · ⭐ 1.6K stars · 🍴 624 forks · 1 authored PR  
+- **[ceph/ceph-csi](https://github.com/ceph/ceph-csi)** - Go · ⭐ 1.6K stars · 🍴 623 forks · 1 authored PR  
   CSI driver for Ceph
 - **[evildecay/etcdkeeper](https://github.com/evildecay/etcdkeeper)** - JavaScript · ⭐ 1.4K stars · 🍴 252 forks · 1 authored PR  
   web ui client for etcd
-- **[sighupio/permission-manager](https://github.com/sighupio/permission-manager)** - TypeScript · ⭐ 1.4K stars · 🍴 174 forks · 1 authored PR  
-  Permission Manager is a project that brings sanity to Kubernetes RBAC and Users management, Web UI FTW
 - **[tensorflow/ecosystem](https://github.com/tensorflow/ecosystem)** - Scala · ⭐ 1.4K stars · 🍴 388 forks · 1 authored issue · archived  
   Integration of TensorFlow with other open-source frameworks
+- **[sighupio/permission-manager](https://github.com/sighupio/permission-manager)** - TypeScript · ⭐ 1.4K stars · 🍴 174 forks · 1 authored PR  
+  Permission Manager is a project that brings sanity to Kubernetes RBAC and Users management, Web UI FTW
 - **[apache/impala](https://github.com/apache/impala)** - C++ · ⭐ 1.3K stars · 🍴 560 forks · 1 authored PR  
   Apache Impala
 - **[openebs/lvm-localpv](https://github.com/openebs/lvm-localpv)** - Go · ⭐ 356 stars · 🍴 128 forks · 1 authored PR  
   Dynamically provision Stateful Persistent Node-Local Volumes & Filesystems for Kubernetes that is integrated with a backend LVM2 data storage stack.
-- **[virtual-kubelet/tensile-kube](https://github.com/virtual-kubelet/tensile-kube)** - Go · ⭐ 291 stars · 🍴 38 forks · 1 authored PR  
+- **[virtual-kubelet/tensile-kube](https://github.com/virtual-kubelet/tensile-kube)** - Go · ⭐ 289 stars · 🍴 38 forks · 1 authored PR  
   A Kubernetes Provider
 - **[k3s-io/docs](https://github.com/k3s-io/docs)** - Shell · ⭐ 33 stars · 🍴 201 forks · 1 authored PR  
   k3s Documentation
 - **[wandb/helm-charts](https://github.com/wandb/helm-charts)** - Go Template · ⭐ 26 stars · 🍴 13 forks · 1 authored PR  
   Our official helm charts for deploying wandb into k8s
-- **[aik8s/cubesandbox-agent-adapter](https://github.com/aik8s/cubesandbox-agent-adapter)** - Python · ⭐ 2 stars · 21 commits  
+- **[aik8s/cubesandbox-agent-adapter](https://github.com/aik8s/cubesandbox-agent-adapter)** - Python · ⭐ 2 stars · 23 commits  
   Policy-controlled CubeSandbox execution adapter for OpenClaw and DeepSeek Harness
 - **[aik8s/.github](https://github.com/aik8s/.github)** - ⭐ 0 stars · 1 commit  
   AIK8s organization profile and shared community health files
@@ -145,13 +145,13 @@
 
 #### 🧱 Original repositories
 
-- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 291 stars · 🍴 61 forks · 🕒 updated 2026-10-09  
-  🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
-- **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - Python · ⭐ 18 stars · 🍴 3 forks · 🕒 updated 2026-10-08  
+- **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - Python · ⭐ 18 stars · 🍴 3 forks · 🕒 updated 2026-10-10  
   AI/LLM on Kubernetes 基础设施知识库：涵盖 GPU、大数据、调度、分布式训练、LLM 推理、RAG、Agent 与生产运维。
-- **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-10-08
-- **[runzhliu/deepseek-harness-docker](https://github.com/runzhliu/deepseek-harness-docker)** - Shell · ⭐ 110 stars · 🍴 11 forks · 🕒 updated 2026-10-08  
+- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 292 stars · 🍴 61 forks · 🕒 updated 2026-10-10  
+  🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
+- **[runzhliu/deepseek-harness-docker](https://github.com/runzhliu/deepseek-harness-docker)** - Shell · ⭐ 110 stars · 🍴 11 forks · 🕒 updated 2026-10-09  
   Community Docker and Kubernetes packaging for DeepSeek Harness (@deepseek-ai/dsh), with a hardened image, Compose stack, Helm chart, Web UI, and he...
+- **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-10-09
 - **[runzhliu/docker-antigravity](https://github.com/runzhliu/docker-antigravity)** - Dockerfile · ⭐ 21 stars · 🍴 4 forks · 🕒 updated 2026-09-23  
   Self-hosted Antigravity in Docker with a browser-accessible GUI via Selkies (WebRTC). No local install needed — deploy on any server or NAS.
 - **[runzhliu/helm-delete](https://github.com/runzhliu/helm-delete)** - Go · ⭐ 1 star · 🕒 updated 2026-08-03  
@@ -201,5 +201,5 @@
 
 </details>
 
-_🕒 Last updated: 2026-10-09 UTC_
+_🕒 Last updated: 2026-10-10 UTC_
 <!-- CONTRIBUTED_PROJECTS:END -->
