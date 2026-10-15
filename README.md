@@ -7,9 +7,9 @@
 <!-- BLOG_POSTS:START -->
 ### ☘️ [aik8s.run](https://aik8s.run/)
 
-- 📝 [Agent 中断续跑示意图](https://aik8s.run/assets/rag-agent/agent-durable-execution/README/) - 2026-10-14
+- 📝 [ChatGPT Dots 技术解析：常驻智能体、云端电脑与企业应用](https://aik8s.run/ai-k8s/rag-agent/chatgpt-dots-overview/) - 2026-10-14
 - 📝 [Agent 长任务中断续跑原理与社区实践](https://aik8s.run/ai-k8s/rag-agent/agent-long-running-durable-execution/) - 2026-10-14
-- 📝 [OCE Kubernetes 实战配图](https://aik8s.run/assets/rag-agent/openclaw-enterprise-practice/README/) - 2026-10-13
+- 📝 [OpenClaw Enterprise Kubernetes 部署实战：持久化、跨集群入口与模型验证](https://aik8s.run/ai-k8s/rag-agent/openclaw-enterprise-kubernetes-practice/) - 2026-10-13
 
 ### 🏠 [runzhliu.cn](https://runzhliu.cn/)
 

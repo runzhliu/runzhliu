@@ -20,6 +20,7 @@ const BLOG_SITES = [
     // The feed also contains the homepage and section landing pages. Actual
     // articles live at /ai-k8s/<section>/<slug>/.
     minPathSegments: 3,
+    excludedPathSegments: ["assets", "readme"],
   },
   {
     name: "runzhliu.cn",
@@ -366,6 +367,9 @@ async function fetchBlogPosts(site) {
         (post) =>
           new URL(post.url).pathname.split("/").filter(Boolean).length >= site.minPathSegments,
       )
+      .filter((post) => !new URL(post.url).pathname.split("/").some(
+        (segment) => site.excludedPathSegments?.includes(segment.toLowerCase()),
+      ))
       .slice(0, BLOG_POST_LIMIT);
   } catch (error) {
     console.warn(`Unable to update ${site.name} posts: ${error.message}`);
