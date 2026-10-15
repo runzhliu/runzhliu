@@ -22,7 +22,7 @@
 
 <!-- CONTRIBUTED_PROJECTS:START -->
 📦 Tracking **30** public repositories under `runzhliu` and **35** external public projects with recognized GitHub contributions.
-📈 Recent activity covers the last **365** days: **1102** commits, PRs, reviews and issues across **11** repositories.
+📈 Recent activity covers the last **365** days: **1103** commits, PRs, reviews and issues across **11** repositories.
 
 ### ✨ Featured Projects
 
@@ -147,11 +147,11 @@
 
 #### 🧱 Original repositories
 
+- **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-10-15
 - **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - Python · ⭐ 21 stars · 🍴 3 forks · 🕒 updated 2026-10-15  
   AI/LLM on Kubernetes 基础设施知识库：涵盖 GPU、大数据、调度、分布式训练、LLM 推理、RAG、Agent 与生产运维。
 - **[runzhliu/deepseek-harness-docker](https://github.com/runzhliu/deepseek-harness-docker)** - Shell · ⭐ 114 stars · 🍴 14 forks · 🕒 updated 2026-10-15  
   Community Docker and Kubernetes packaging for DeepSeek Harness (@deepseek-ai/dsh), with a hardened image, Compose stack, Helm chart, Web UI, and he...
-- **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-10-15
 - **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 294 stars · 🍴 61 forks · 🕒 updated 2026-10-14  
   🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
 - **[runzhliu/docker-antigravity](https://github.com/runzhliu/docker-antigravity)** - Dockerfile · ⭐ 21 stars · 🍴 4 forks · 🕒 updated 2026-09-23  
