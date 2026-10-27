@@ -1,6 +1,6 @@
 # Hi, I'm runzhliu 👋
 
-☸️ Focus on Kubernetes & AI/LLMs Infras.
+☸️ Focus on Kubernetes & AI/LLMs Infra.
 
 ## 🎙️ Podcast & Blog
 
