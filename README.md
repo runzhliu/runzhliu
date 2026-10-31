@@ -22,13 +22,13 @@
 
 <!-- CONTRIBUTED_PROJECTS:START -->
 📦 Tracking **31** public repositories under `runzhliu` and **35** external public projects with recognized GitHub contributions.
-📈 Recent activity covers the last **365** days: **1195** commits, PRs, reviews and issues across **12** repositories.
+📈 Recent activity covers the last **365** days: **1196** commits, PRs, reviews and issues across **12** repositories.
 
 ### ✨ Featured Projects
 
 - **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 306 stars · 🍴 63 forks · 610 commits, 3 issues  
   🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
-- **[runzhliu/deepseek-harness-docker](https://github.com/runzhliu/deepseek-harness-docker)** - Shell · ⭐ 137 stars · 🍴 18 forks · 66 commits, 11 PRs  
+- **[runzhliu/deepseek-harness-docker](https://github.com/runzhliu/deepseek-harness-docker)** - Shell · ⭐ 141 stars · 🍴 18 forks · 66 commits, 11 PRs  
   Community Docker and Kubernetes packaging for DeepSeek Harness (@deepseek-ai/dsh), with a hardened image, Compose stack, Helm chart, Web UI, and he...
 - **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - Python · ⭐ 28 stars · 🍴 4 forks · 298 commits, 1 PR  
   AI/LLM on Kubernetes 基础设施知识库：涵盖 GPU、大数据、调度、分布式训练、LLM 推理、RAG、Agent 与生产运维。
@@ -54,7 +54,7 @@
   all of the gcr.io docker image mirror
 - **[pravega/zookeeper-operator](https://github.com/pravega/zookeeper-operator)** - Go · ⭐ 383 stars · 🍴 219 forks · 1 authored PR, 1 authored issue, 1 reviewed PR  
   Kubernetes Operator for Zookeeper
-- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 4.5K stars · 🍴 591 forks · 2 authored PRs · 1 commit, 2 PRs  
+- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 4.5K stars · 🍴 592 forks · 2 authored PRs · 1 commit, 2 PRs  
   agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes and reinforcement lear...
 - **[TencentCloud/CubeSandbox](https://github.com/TencentCloud/CubeSandbox)** - Go · ⭐ 13K stars · 🍴 1.2K forks · 1 authored PR, 1 reviewed PR · 1 PR  
   Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.
@@ -82,7 +82,7 @@
   all of the gcr.io docker image mirror
 - **[pravega/zookeeper-operator](https://github.com/pravega/zookeeper-operator)** - Go · ⭐ 383 stars · 🍴 219 forks · 1 authored PR, 1 authored issue, 1 reviewed PR  
   Kubernetes Operator for Zookeeper
-- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 4.5K stars · 🍴 591 forks · 2 authored PRs · 1 commit, 2 PRs  
+- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 4.5K stars · 🍴 592 forks · 2 authored PRs · 1 commit, 2 PRs  
   agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes and reinforcement lear...
 - **[TencentCloud/CubeSandbox](https://github.com/TencentCloud/CubeSandbox)** - Go · ⭐ 13K stars · 🍴 1.2K forks · 1 authored PR, 1 reviewed PR · 1 PR  
   Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.
@@ -115,7 +115,7 @@
   An open-source storage framework that enables building a Lakehouse architecture with compute engines including Spark, PrestoDB, Flink, Trino, and H...
 - **[kubeflow/spark-operator](https://github.com/kubeflow/spark-operator)** - Python · ⭐ 3.2K stars · 🍴 1.5K forks · 1 authored PR  
   Kubernetes operator for managing the lifecycle of Apache Spark applications on Kubernetes.
-- **[kubeovn/kube-ovn](https://github.com/kubeovn/kube-ovn)** - Go · ⭐ 2.4K stars · 🍴 561 forks · 1 authored PR  
+- **[kubeovn/kube-ovn](https://github.com/kubeovn/kube-ovn)** - Go · ⭐ 2.4K stars · 🍴 563 forks · 1 authored PR  
   A Bridge between SDN and Cloud Native (Project under CNCF)
 - **[ceph/ceph-csi](https://github.com/ceph/ceph-csi)** - Go · ⭐ 1.6K stars · 🍴 631 forks · 1 authored PR  
   CSI driver for Ceph
@@ -127,7 +127,7 @@
   Permission Manager is a project that brings sanity to Kubernetes RBAC and Users management, Web UI FTW
 - **[apache/impala](https://github.com/apache/impala)** - C++ · ⭐ 1.3K stars · 🍴 561 forks · 1 authored PR  
   Apache Impala
-- **[openebs/lvm-localpv](https://github.com/openebs/lvm-localpv)** - Go · ⭐ 359 stars · 🍴 130 forks · 1 authored PR  
+- **[openebs/lvm-localpv](https://github.com/openebs/lvm-localpv)** - Go · ⭐ 361 stars · 🍴 130 forks · 1 authored PR  
   Dynamically provision Stateful Persistent Node-Local Volumes & Filesystems for Kubernetes that is integrated with a backend LVM2 data storage stack.
 - **[virtual-kubelet/tensile-kube](https://github.com/virtual-kubelet/tensile-kube)** - Go · ⭐ 288 stars · 🍴 38 forks · 1 authored PR  
   A Kubernetes Provider
@@ -147,11 +147,11 @@
 
 #### 🧱 Original repositories
 
+- **[runzhliu/deepseek-harness-docker](https://github.com/runzhliu/deepseek-harness-docker)** - Shell · ⭐ 141 stars · 🍴 18 forks · 🕒 updated 2026-10-31  
+  Community Docker and Kubernetes packaging for DeepSeek Harness (@deepseek-ai/dsh), with a hardened image, Compose stack, Helm chart, Web UI, and he...
+- **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-10-30
 - **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - Python · ⭐ 28 stars · 🍴 4 forks · 🕒 updated 2026-10-30  
   AI/LLM on Kubernetes 基础设施知识库：涵盖 GPU、大数据、调度、分布式训练、LLM 推理、RAG、Agent 与生产运维。
-- **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-10-29
-- **[runzhliu/deepseek-harness-docker](https://github.com/runzhliu/deepseek-harness-docker)** - Shell · ⭐ 137 stars · 🍴 18 forks · 🕒 updated 2026-10-29  
-  Community Docker and Kubernetes packaging for DeepSeek Harness (@deepseek-ai/dsh), with a hardened image, Compose stack, Helm chart, Web UI, and he...
 - **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 306 stars · 🍴 63 forks · 🕒 updated 2026-10-27  
   🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
 - **[runzhliu/deepinfer-dockerfile](https://github.com/runzhliu/deepinfer-dockerfile)** - Python · ⭐ 0 stars · 🕒 updated 2026-10-21  
@@ -207,5 +207,5 @@
 
 </details>
 
-_🕒 Last updated: 2026-10-30 UTC_
+_🕒 Last updated: 2026-10-31 UTC_
 <!-- CONTRIBUTED_PROJECTS:END -->
