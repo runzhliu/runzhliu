@@ -7,9 +7,9 @@
 <!-- BLOG_POSTS:START -->
 ### ☘️ [aik8s.run](https://aik8s.run/)
 
-- 📝 [从 cgroup v1 到 v2：在 Kubernetes 节点实测 youki、crun 和 runc](https://aik8s.run/ai-k8s/cluster/youki-crun-cgroup-v1/) - 2026-11-19
-- 📝 [OpenMausBot Kubernetes 实战：从一条复测消息到一份可下载的报告](https://aik8s.run/ai-k8s/rag-agent/openmausbot-kubernetes-practice/) - 2026-11-18
-- 📝 [在 Kubernetes 上实测 Rakazo：让 Bot 读库存表、写报告，再和 Grok Bot 对比](https://aik8s.run/ai-k8s/rag-agent/rakazo-kubernetes-practice/) - 2026-11-18
+- 📝 [集群明明还剩 8 张卡，为什么推理 Pod 起不来？用 Volcano 实测五种 GPU 调度取舍](https://aik8s.run/ai-k8s/practices/volcano-gpu-placement/) - 2026-11-23
+- 📝 [Volcano 1.16 GPU 调度实战：有空卡为什么还要等，下一张卡又该给谁？](https://aik8s.run/ai-k8s/practices/volcano-116-gpu-scheduling/) - 2026-11-23
+- 📝 [沙箱创建成功，通知为何还会失败？CubeSandbox 日志、Webhook 与 Trace 实测](https://aik8s.run/ai-k8s/rag-agent/cubesandbox-webhook-otel-lifecycle/) - 2026-11-23
 
 ### 🏠 [runzhliu.cn](https://runzhliu.cn/)
 
@@ -22,15 +22,15 @@
 
 <!-- CONTRIBUTED_PROJECTS:START -->
 📦 Tracking **32** public repositories under `runzhliu` and **35** external public projects with recognized GitHub contributions.
-📈 Recent activity covers the last **365** days: **1328** commits, PRs, reviews and issues across **13** repositories.
+📈 Recent activity covers the last **365** days: **1336** commits, PRs, reviews and issues across **13** repositories.
 
 ### ✨ Featured Projects
 
-- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 325 stars · 🍴 67 forks · 642 commits, 3 issues  
+- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 325 stars · 🍴 68 forks · 642 commits, 3 issues  
   🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
-- **[runzhliu/deepseek-harness-docker](https://github.com/runzhliu/deepseek-harness-docker)** - JavaScript · ⭐ 186 stars · 🍴 28 forks · 84 commits, 11 PRs  
+- **[runzhliu/deepseek-harness-docker](https://github.com/runzhliu/deepseek-harness-docker)** - JavaScript · ⭐ 187 stars · 🍴 31 forks · 89 commits, 11 PRs  
   Community Docker and Kubernetes packaging for DeepSeek Harness (@deepseek-ai/dsh), with a hardened image, Compose stack, Helm chart, Web UI, and he...
-- **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - Python · ⭐ 45 stars · 🍴 4 forks · 349 commits, 1 PR, 2 issues  
+- **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - Python · ⭐ 46 stars · 🍴 4 forks · 351 commits, 1 PR, 2 issues  
   AI/LLM on Kubernetes 基础设施知识库：涵盖 GPU、大数据、调度、分布式训练、LLM 推理、RAG、Agent 与生产运维。| AI/LLM on Kubernetes Infrastructure Knowledge Base: Covering GPUs, big da...
 - **[runzhliu/docker-antigravity](https://github.com/runzhliu/docker-antigravity)** - Dockerfile · ⭐ 22 stars · 🍴 5 forks · 19 commits, 1 PR  
   Self-hosted Antigravity in Docker with a browser-accessible GUI via Selkies (WebRTC). No local install needed — deploy on any server or NAS.
@@ -54,15 +54,15 @@
   all of the gcr.io docker image mirror
 - **[pravega/zookeeper-operator](https://github.com/pravega/zookeeper-operator)** - Go · ⭐ 383 stars · 🍴 218 forks · 1 authored PR, 1 authored issue, 1 reviewed PR  
   Kubernetes Operator for Zookeeper
-- **[awesome-dsh-plugin/awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)** - JavaScript · ⭐ 25K stars · 🍴 9.4K forks · 2 authored PRs · 2 commits, 2 PRs  
+- **[awesome-dsh-plugin/awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)** - JavaScript · ⭐ 25K stars · 🍴 9.5K forks · 2 authored PRs · 2 commits, 2 PRs  
   A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表
-- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 4.7K stars · 🍴 629 forks · 2 authored PRs · 1 commit, 2 PRs  
+- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 4.7K stars · 🍴 630 forks · 2 authored PRs · 1 commit, 2 PRs  
   agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes and reinforcement lear...
 - **[TencentCloud/CubeSandbox](https://github.com/TencentCloud/CubeSandbox)** - Go · ⭐ 13K stars · 🍴 1.2K forks · 1 authored PR, 1 reviewed PR · 1 PR  
   Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.
 - **[kubernetes/website](https://github.com/kubernetes/website)** - HTML · ⭐ 5.4K stars · 🍴 16K forks · 1 authored PR, 1 authored issue  
   Kubernetes website and documentation repo:
-- **[NVIDIA/dcgm-exporter](https://github.com/NVIDIA/dcgm-exporter)** - Go · ⭐ 1.9K stars · 🍴 361 forks · 2 authored PRs  
+- **[NVIDIA/dcgm-exporter](https://github.com/NVIDIA/dcgm-exporter)** - Go · ⭐ 1.9K stars · 🍴 362 forks · 2 authored PRs  
   NVIDIA hardware telemetry for Prometheus.
 - **[kubernetes-sigs/scheduler-plugins](https://github.com/kubernetes-sigs/scheduler-plugins)** - Go · ⭐ 1.3K stars · 🍴 622 forks · 1 authored PR, 1 reviewed PR  
   Repository for out-of-tree scheduler plugins based on scheduler framework.
@@ -82,15 +82,15 @@
   all of the gcr.io docker image mirror
 - **[pravega/zookeeper-operator](https://github.com/pravega/zookeeper-operator)** - Go · ⭐ 383 stars · 🍴 218 forks · 1 authored PR, 1 authored issue, 1 reviewed PR  
   Kubernetes Operator for Zookeeper
-- **[awesome-dsh-plugin/awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)** - JavaScript · ⭐ 25K stars · 🍴 9.4K forks · 2 authored PRs · 2 commits, 2 PRs  
+- **[awesome-dsh-plugin/awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)** - JavaScript · ⭐ 25K stars · 🍴 9.5K forks · 2 authored PRs · 2 commits, 2 PRs  
   A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表
-- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 4.7K stars · 🍴 629 forks · 2 authored PRs · 1 commit, 2 PRs  
+- **[kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** - Go · ⭐ 4.7K stars · 🍴 630 forks · 2 authored PRs · 1 commit, 2 PRs  
   agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes and reinforcement lear...
 - **[TencentCloud/CubeSandbox](https://github.com/TencentCloud/CubeSandbox)** - Go · ⭐ 13K stars · 🍴 1.2K forks · 1 authored PR, 1 reviewed PR · 1 PR  
   Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.
 - **[kubernetes/website](https://github.com/kubernetes/website)** - HTML · ⭐ 5.4K stars · 🍴 16K forks · 1 authored PR, 1 authored issue  
   Kubernetes website and documentation repo:
-- **[NVIDIA/dcgm-exporter](https://github.com/NVIDIA/dcgm-exporter)** - Go · ⭐ 1.9K stars · 🍴 361 forks · 2 authored PRs  
+- **[NVIDIA/dcgm-exporter](https://github.com/NVIDIA/dcgm-exporter)** - Go · ⭐ 1.9K stars · 🍴 362 forks · 2 authored PRs  
   NVIDIA hardware telemetry for Prometheus.
 - **[kubernetes-sigs/scheduler-plugins](https://github.com/kubernetes-sigs/scheduler-plugins)** - Go · ⭐ 1.3K stars · 🍴 622 forks · 1 authored PR, 1 reviewed PR  
   Repository for out-of-tree scheduler plugins based on scheduler framework.
@@ -102,7 +102,7 @@
   Apache Spark - A unified analytics engine for large-scale data processing
 - **[rancher/rancher](https://github.com/rancher/rancher)** - Go · ⭐ 26K stars · 🍴 3.2K forks · 1 authored PR  
   Complete container management platform
-- **[cilium/cilium](https://github.com/cilium/cilium)** - Go · ⭐ 26K stars · 🍴 4.2K forks · 1 authored PR  
+- **[cilium/cilium](https://github.com/cilium/cilium)** - Go · ⭐ 26K stars · 🍴 4.3K forks · 1 authored PR  
   eBPF-based Networking, Security, and Observability
 - **[timqian/chinese-independent-blogs](https://github.com/timqian/chinese-independent-blogs)** - JavaScript · ⭐ 25K stars · 🍴 2.8K forks · 1 authored PR  
   中文独立博客列表
@@ -117,7 +117,7 @@
   An open-source storage framework that enables building a Lakehouse architecture with compute engines including Spark, PrestoDB, Flink, Trino, and H...
 - **[kubeflow/spark-operator](https://github.com/kubeflow/spark-operator)** - Python · ⭐ 3.2K stars · 🍴 1.6K forks · 1 authored PR  
   Kubernetes operator for managing the lifecycle of Apache Spark applications on Kubernetes.
-- **[kubeovn/kube-ovn](https://github.com/kubeovn/kube-ovn)** - Go · ⭐ 2.4K stars · 🍴 567 forks · 1 authored PR  
+- **[kubeovn/kube-ovn](https://github.com/kubeovn/kube-ovn)** - Go · ⭐ 2.4K stars · 🍴 568 forks · 1 authored PR  
   A Bridge between SDN and Cloud Native (Project under CNCF)
 - **[ceph/ceph-csi](https://github.com/ceph/ceph-csi)** - Go · ⭐ 1.6K stars · 🍴 632 forks · 1 authored PR  
   CSI driver for Ceph
@@ -131,7 +131,7 @@
   Dynamically provision Stateful Persistent Node-Local Volumes & Filesystems for Kubernetes that is integrated with a backend LVM2 data storage stack.
 - **[virtual-kubelet/tensile-kube](https://github.com/virtual-kubelet/tensile-kube)** - Go · ⭐ 288 stars · 🍴 38 forks · 1 authored PR  
   A Kubernetes Provider
-- **[k3s-io/docs](https://github.com/k3s-io/docs)** - Shell · ⭐ 33 stars · 🍴 210 forks · 1 authored PR  
+- **[k3s-io/docs](https://github.com/k3s-io/docs)** - Shell · ⭐ 33 stars · 🍴 209 forks · 1 authored PR  
   k3s Documentation
 - **[wandb/helm-charts](https://github.com/wandb/helm-charts)** - Go Template · ⭐ 26 stars · 🍴 14 forks · 1 authored PR  
   Our official helm charts for deploying wandb into k8s
@@ -147,11 +147,11 @@
 
 #### 🧱 Original repositories
 
-- **[runzhliu/deepseek-harness-docker](https://github.com/runzhliu/deepseek-harness-docker)** - JavaScript · ⭐ 186 stars · 🍴 28 forks · 🕒 updated 2026-11-22  
-  Community Docker and Kubernetes packaging for DeepSeek Harness (@deepseek-ai/dsh), with a hardened image, Compose stack, Helm chart, Web UI, and he...
-- **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - Python · ⭐ 45 stars · 🍴 4 forks · 🕒 updated 2026-11-20  
+- **[runzhliu/aik8s](https://github.com/runzhliu/aik8s)** - Python · ⭐ 46 stars · 🍴 4 forks · 🕒 updated 2026-11-23  
   AI/LLM on Kubernetes 基础设施知识库：涵盖 GPU、大数据、调度、分布式训练、LLM 推理、RAG、Agent 与生产运维。| AI/LLM on Kubernetes Infrastructure Knowledge Base: Covering GPUs, big da...
-- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 325 stars · 🍴 67 forks · 🕒 updated 2026-11-16  
+- **[runzhliu/deepseek-harness-docker](https://github.com/runzhliu/deepseek-harness-docker)** - JavaScript · ⭐ 187 stars · 🍴 31 forks · 🕒 updated 2026-11-22  
+  Community Docker and Kubernetes packaging for DeepSeek Harness (@deepseek-ai/dsh), with a hardened image, Compose stack, Helm chart, Web UI, and he...
+- **[runzhliu/welink](https://github.com/runzhliu/welink)** - TypeScript · ⭐ 325 stars · 🍴 68 forks · 🕒 updated 2026-11-16  
   🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像
 - **[runzhliu/runzhliu](https://github.com/runzhliu/runzhliu)** - JavaScript · ⭐ 0 stars · 🕒 updated 2026-11-12
 - **[runzhliu/docker-antigravity](https://github.com/runzhliu/docker-antigravity)** - Dockerfile · ⭐ 22 stars · 🍴 5 forks · 🕒 updated 2026-11-07  
@@ -209,5 +209,5 @@
 
 </details>
 
-_🕒 Last updated: 2026-11-22 UTC_
+_🕒 Last updated: 2026-11-23 UTC_
 <!-- CONTRIBUTED_PROJECTS:END -->
